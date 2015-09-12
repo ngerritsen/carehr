@@ -1,0 +1,395 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
+@import "compass";
+
+/* Variabless */
+
+$main-font: 'Open Sans', Helvetica, Arial, sans-serif;
+
+$care-blue: #0077d4;
+$care-green: #46d05d;
+$alert-red: #d44d4d;
+
+$dark: #333;
+$grey: #979797;
+$white: #fff;
+
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+
+/* Mixins */
+
+.reset-spacing {
+    margin: 0; padding: 0;
+}
+
+.button-builder {
+    @extend .reset-spacing;
+    @include border-radius(8px);
+    padding: 0 18px;
+    height: 38px;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: $semi-bold;
+    display: inline-block;
+    box-sizing: border-box;
+    @include transition(all 0.2s ease);
+
+    &:hover {
+        text-decoration: none;
+        opacity: 0.8;
+    }
+}
+
+@mixin button-border($color) {
+    @extend .button-builder;
+    color: $color;
+    border: 3px solid $color;
+    background-color: transparent;
+
+    @if lightness($color) > 50% {
+        &:hover {
+            color: darken($color, 35%);
+            border-color: darken($color, 35%);
+        }
+    }
+    @else {
+        &:hover {
+            color: lighten($color, 35%);
+            border-color: lighten($color, 35%);
+        }
+    }
+}
+
+/* Basic */
+
+body {
+    font-family: $main-font;
+    color: $dark;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1080px;
+    padding: 42px 21px;
+    margin: 0 auto;
+    @include clearfix;
+}
+
+h2 {
+    font-family: $main-font;
+    font-size: 36px;
+    font-weight: $regular;
+}
+
+h3 {
+    font-family: $main-font;
+    font-size: 24px;
+    font-weight: $semi-bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Main Page */
+
+$nav-height: 110px;
+
+#top-bar {
+    position: fixed;
+    width: 100%;
+    height: $nav-height;
+    margin: 0;
+    z-index: 9999;
+    @include transition(all 0.8s ease);
+
+    &.narrow {
+        height: $nav-height/1.6;
+    }
+
+    .wrap {
+        padding: 0 21px;
+    }
+
+    background-color: rgba(249,249,249,0.85);
+}
+
+
+.logo-container {
+    display: table-cell;
+    vertical-align: middle;
+    height: $nav-height;
+    @include transition(all 0.8s ease);
+
+    .logo {
+        max-width: 95%;
+        max-height: 95%;
+        display: inline-block;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.narrow .logo-container {
+    height: $nav-height/1.6;
+}
+
+nav {
+    ul {
+        @extend .reset-spacing;
+        list-style: none;
+        float: right;
+        li {
+            @extend .reset-spacing;
+            @include transition(all 0.8s ease);
+            float: left;
+            height: $nav-height;
+            padding-top: 35px;
+            margin-left: 21px;
+            a {
+                @include button-border($grey);
+                padding: 0 18px !important;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .active a {
+            color: darken($grey, 30%);
+            border-color: darken($grey, 30%);
+        }
+    }
+}
+.mobile {
+    display: none;
+    float: right;
+    padding-top: 22px;
+}
+
+.instruction {
+    color: $grey;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.narrow li, 
+.narrow .mobile {
+    padding-top: 16px;
+}
+
+
+
+header {
+    padding-top: $nav-height;
+    background-color: rgb(249,249,249);
+    .wrap {
+        background: url(../images/doctors.jpg) no-repeat center top;
+        height: 400px;
+        padding: 0;
+    }
+}
+
+#intro {
+    background-color: $dark;
+    color: $white;
+
+    p {
+        font-size: 18px;
+    }
+
+    .button {
+        margin-top: 24px;
+        @include button-border($white);
+    }
+
+    img {
+        display: block;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.dienst {
+    margin: 32px 0;
+
+    h3 {
+        color: lighten($dark, 10%);
+        margin-bottom: 18px;
+    }
+    img {
+        max-width: 25%;
+        height: auto;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .intro {
+        font-weight: 600;
+    }
+
+    &:nth-child(2n+0) {
+        text-align: left;
+
+        img {
+            float: left;
+            margin-right: 24px;
+        }
+    }
+
+    &:nth-child(2n+1) {
+        img {
+            float: right;
+            margin-left: 24px;
+        }
+    }
+}
+
+#over {
+    background-color: darken($white, 6%);
+
+    p {
+        font-size: 18px;
+    }
+
+    .button {
+        margin-top: 24px;
+        @include button-border($care-blue);
+    }
+}
+
+#contact {
+    background-color: $dark;
+    color: $white;
+
+    form {
+        margin-bottom: 24px;
+    }
+
+    label {
+        font-size: 18px;
+        font-weight: 600;
+        color: darken($white, 20%);
+    }
+
+    label.error {
+        padding-top: 6px;
+        color: $alert-red;
+    }
+
+    .message-container {
+        $height: 40px;
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        height: $height;
+        color: $white;
+        z-index: 9999;
+        text-align: center;
+
+        p {
+            height: $height;
+            line-height: $height;
+        }
+
+        .close-message {
+            position: absolute;
+            right: $height/2;
+            top: 0;
+            height: $height;
+            line-height: $height;
+            color: $white;
+
+            &:hover {
+                @include opacity(0.7);
+            }
+        }
+
+        &.succes {
+            background-color: $care-green;
+        }
+
+        &.error {
+            background-color: $alert-red;
+        }
+    }
+
+    textarea, input {
+        border: 0;
+        box-sizing: border-box;
+        border: 2px solid lighten($dark, 15%);
+
+        &:focus {
+            outline: none;
+            border-color: lighten($dark, 35%);
+            box-shadow: none;
+        }
+
+        &.error {
+            border-color: $alert-red;
+            color: $alert-red;
+        }
+    }
+
+    .button {
+        margin-top: 24px;
+        @include button-border($white);
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 24px;
+
+        &.succes {
+            color: $care-green;
+            font-size: 20px;
+            @include border-radius(4px);
+            border: 2px solid $care-green; 
+            padding: 6px 12px;
+        }
+    }
+
+    .contact-wrapper {
+        background-color: darken($dark, 4%);
+        border: 2px solid lighten($dark, 4%);
+        @include border-radius(8px);
+        @include clearfix;
+
+        p {
+            margin: 18px;
+        }
+
+        a {
+            color: $white;
+
+            &:hover {
+                color: lighten($care-blue, 30%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .nav {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+

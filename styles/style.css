@@ -1,0 +1,424 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
+/* Variabless */
+/* Mixins */
+/* line 22, sass/style.scss */
+.reset-spacing, .button-builder, nav ul li a, #intro .button, #over .button, #contact .button, nav ul, nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 26, sass/style.scss */
+.button-builder, nav ul li a, #intro .button, #over .button, #contact .button {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  padding: 0 18px;
+  height: 38px;
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 38, sass/style.scss */
+.button-builder:hover, nav ul li a:hover, #intro .button:hover, #over .button:hover, #contact .button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* Basic */
+/* line 66, sass/style.scss */
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+/* line 71, sass/style.scss */
+.container-fluid {
+  padding: 0;
+}
+
+/* line 75, sass/style.scss */
+.row {
+  margin: 0;
+}
+
+/* line 79, sass/style.scss */
+.wrap {
+  width: 100%;
+  max-width: 1080px;
+  padding: 42px 21px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 87, sass/style.scss */
+h2 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+/* line 93, sass/style.scss */
+h3 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* line 99, sass/style.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* Main Page */
+/* line 107, sass/style.scss */
+#top-bar {
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  margin: 0;
+  z-index: 9999;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  background-color: rgba(249, 249, 249, 0.85);
+}
+/* line 115, sass/style.scss */
+#top-bar.narrow {
+  height: 68.75px;
+}
+/* line 119, sass/style.scss */
+#top-bar .wrap {
+  padding: 0 21px;
+}
+
+/* line 127, sass/style.scss */
+.logo-container {
+  display: table-cell;
+  vertical-align: middle;
+  height: 110px;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+/* line 133, sass/style.scss */
+.logo-container .logo {
+  max-width: 95%;
+  max-height: 95%;
+  display: inline-block;
+}
+/* line 139, sass/style.scss */
+.logo-container:hover {
+  opacity: 0.8;
+}
+
+/* line 144, sass/style.scss */
+.narrow .logo-container {
+  height: 68.75px;
+}
+
+/* line 149, sass/style.scss */
+nav ul {
+  list-style: none;
+  float: right;
+}
+/* line 153, sass/style.scss */
+nav ul li {
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  float: left;
+  height: 110px;
+  padding-top: 35px;
+  margin-left: 21px;
+}
+/* line 160, sass/style.scss */
+nav ul li a {
+  color: #979797;
+  border: 3px solid #979797;
+  background-color: transparent;
+  padding: 0 18px !important;
+}
+/* line 51, sass/style.scss */
+nav ul li a:hover {
+  color: #3e3e3e;
+  border-color: #3e3e3e;
+}
+/* line 166, sass/style.scss */
+nav ul .hidden {
+  display: none;
+}
+/* line 170, sass/style.scss */
+nav ul .active a {
+  color: #4b4b4b;
+  border-color: #4b4b4b;
+}
+
+/* line 176, sass/style.scss */
+.mobile {
+  display: none;
+  float: right;
+  padding-top: 22px;
+}
+
+/* line 182, sass/style.scss */
+.instruction {
+  color: #979797;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* line 189, sass/style.scss */
+.narrow li,
+.narrow .mobile {
+  padding-top: 16px;
+}
+
+/* line 195, sass/style.scss */
+header {
+  padding-top: 110px;
+  background-color: #f9f9f9;
+}
+/* line 198, sass/style.scss */
+header .wrap {
+  background: url(../images/doctors.jpg) no-repeat center top;
+  height: 400px;
+  padding: 0;
+}
+
+/* line 205, sass/style.scss */
+#intro {
+  background-color: #333333;
+  color: white;
+}
+/* line 209, sass/style.scss */
+#intro p {
+  font-size: 18px;
+}
+/* line 213, sass/style.scss */
+#intro .button {
+  margin-top: 24px;
+  color: white;
+  border: 3px solid white;
+  background-color: transparent;
+}
+/* line 51, sass/style.scss */
+#intro .button:hover {
+  color: #a6a6a6;
+  border-color: #a6a6a6;
+}
+/* line 218, sass/style.scss */
+#intro img {
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* line 225, sass/style.scss */
+.dienst {
+  margin: 32px 0;
+}
+/* line 228, sass/style.scss */
+.dienst h3 {
+  color: #4d4d4d;
+  margin-bottom: 18px;
+}
+/* line 232, sass/style.scss */
+.dienst img {
+  max-width: 25%;
+  height: auto;
+}
+/* line 237, sass/style.scss */
+.dienst p {
+  font-size: 17px;
+}
+/* line 241, sass/style.scss */
+.dienst .intro {
+  font-weight: 600;
+}
+/* line 245, sass/style.scss */
+.dienst:nth-child(2n+0) {
+  text-align: left;
+}
+/* line 248, sass/style.scss */
+.dienst:nth-child(2n+0) img {
+  float: left;
+  margin-right: 24px;
+}
+/* line 255, sass/style.scss */
+.dienst:nth-child(2n+1) img {
+  float: right;
+  margin-left: 24px;
+}
+
+/* line 262, sass/style.scss */
+#over {
+  background-color: #f0f0f0;
+}
+/* line 265, sass/style.scss */
+#over p {
+  font-size: 18px;
+}
+/* line 269, sass/style.scss */
+#over .button {
+  margin-top: 24px;
+  color: #0077d4;
+  border: 3px solid #0077d4;
+  background-color: transparent;
+}
+/* line 57, sass/style.scss */
+#over .button:hover {
+  color: #87cbff;
+  border-color: #87cbff;
+}
+
+/* line 275, sass/style.scss */
+#contact {
+  background-color: #333333;
+  color: white;
+}
+/* line 279, sass/style.scss */
+#contact form {
+  margin-bottom: 24px;
+}
+/* line 283, sass/style.scss */
+#contact label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #cccccc;
+}
+/* line 289, sass/style.scss */
+#contact label.error {
+  padding-top: 6px;
+  color: #d44d4d;
+}
+/* line 294, sass/style.scss */
+#contact .message-container {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 40px;
+  color: white;
+  z-index: 9999;
+  text-align: center;
+}
+/* line 304, sass/style.scss */
+#contact .message-container p {
+  height: 40px;
+  line-height: 40px;
+}
+/* line 309, sass/style.scss */
+#contact .message-container .close-message {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+}
+/* line 317, sass/style.scss */
+#contact .message-container .close-message:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 322, sass/style.scss */
+#contact .message-container.succes {
+  background-color: #46d05d;
+}
+/* line 326, sass/style.scss */
+#contact .message-container.error {
+  background-color: #d44d4d;
+}
+/* line 331, sass/style.scss */
+#contact textarea, #contact input {
+  border: 0;
+  box-sizing: border-box;
+  border: 2px solid #595959;
+}
+/* line 336, sass/style.scss */
+#contact textarea:focus, #contact input:focus {
+  outline: none;
+  border-color: #8c8c8c;
+  box-shadow: none;
+}
+/* line 342, sass/style.scss */
+#contact textarea.error, #contact input.error {
+  border-color: #d44d4d;
+  color: #d44d4d;
+}
+/* line 348, sass/style.scss */
+#contact .button {
+  margin-top: 24px;
+  color: white;
+  border: 3px solid white;
+  background-color: transparent;
+}
+/* line 51, sass/style.scss */
+#contact .button:hover {
+  color: #a6a6a6;
+  border-color: #a6a6a6;
+}
+/* line 353, sass/style.scss */
+#contact p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+/* line 357, sass/style.scss */
+#contact p.succes {
+  color: #46d05d;
+  font-size: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 2px solid #46d05d;
+  padding: 6px 12px;
+}
+/* line 366, sass/style.scss */
+#contact .contact-wrapper {
+  background-color: #292929;
+  border: 2px solid #3d3d3d;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 372, sass/style.scss */
+#contact .contact-wrapper p {
+  margin: 18px;
+}
+/* line 376, sass/style.scss */
+#contact .contact-wrapper a {
+  color: white;
+}
+/* line 379, sass/style.scss */
+#contact .contact-wrapper a:hover {
+  color: #6ebfff;
+}
+
+@media screen and (max-width: 820px) {
+  /* line 387, sass/style.scss */
+  .nav {
+    display: none;
+  }
+
+  /* line 390, sass/style.scss */
+  .mobile {
+    display: block;
+  }
+}
