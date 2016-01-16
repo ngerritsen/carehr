@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
-@import "compass";
 
 /* Variabless */
 
@@ -25,7 +24,7 @@ $bold: 700;
 
 .button-builder {
     @extend .reset-spacing;
-    @include border-radius(8px);
+    border-radius: 8px;
     padding: 0 18px;
     height: 38px;
     line-height: 32px;
@@ -33,12 +32,24 @@ $bold: 700;
     font-weight: $semi-bold;
     display: inline-block;
     box-sizing: border-box;
-    @include transition(all 0.2s ease);
+    transition: all 0.2s ease;
 
     &:hover {
         text-decoration: none;
         opacity: 0.8;
     }
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 @mixin button-border($color) {
@@ -110,7 +121,7 @@ $nav-height: 110px;
     height: $nav-height;
     margin: 0;
     z-index: 9999;
-    @include transition(all 0.8s ease);
+    transition: all 0.8s ease;
 
     &.narrow {
         height: $nav-height/1.6;
@@ -128,7 +139,7 @@ $nav-height: 110px;
     display: table-cell;
     vertical-align: middle;
     height: $nav-height;
-    @include transition(all 0.8s ease);
+    transition: all 0.8s ease;
 
     .logo {
         max-width: 95%;
@@ -152,7 +163,7 @@ nav {
         float: right;
         li {
             @extend .reset-spacing;
-            @include transition(all 0.8s ease);
+            transition: all 0.8s ease;
             float: left;
             height: $nav-height;
             padding-top: 35px;
@@ -185,7 +196,7 @@ nav {
     font-weight: 600;
 }
 
-.narrow li, 
+.narrow li,
 .narrow .mobile {
     padding-top: 16px;
 }
@@ -315,7 +326,7 @@ header {
             color: $white;
 
             &:hover {
-                @include opacity(0.7);
+                opacity: 0.7;
             }
         }
 
@@ -347,7 +358,7 @@ header {
 
     .button {
         margin-top: 24px;
-        @include button-border($white);
+        button-border: $white;
     }
 
     p {
@@ -357,8 +368,8 @@ header {
         &.succes {
             color: $care-green;
             font-size: 20px;
-            @include border-radius(4px);
-            border: 2px solid $care-green; 
+            border-radius: 4px;
+            border: 2px solid $care-green;
             padding: 6px 12px;
         }
     }
@@ -366,7 +377,7 @@ header {
     .contact-wrapper {
         background-color: darken($dark, 4%);
         border: 2px solid lighten($dark, 4%);
-        @include border-radius(8px);
+        border-radius: 8px;
         @include clearfix;
 
         p {
@@ -391,5 +402,3 @@ header {
         display: block;
     }
 }
-
-

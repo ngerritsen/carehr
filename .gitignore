@@ -1,1 +1,3 @@
-style.css
+styles/style.css
+styles/.sass-cache
+node_modules
