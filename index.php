@@ -75,17 +75,12 @@
                 <p class="intro">De Zorg heeft te maken met ingrijpende veranderingen. Functies vervallen of veranderen. Sociale plannen worden opgesteld.</p>
                 <p>Als lid van de Commissie Sociale Begeleiding Vlietland Ziekenhuis, voorzitter Commissie Sociale Begeleiding Rijndam revalidatiecentrum te Rotterdam en voorzitter IBC van diverse ziekenhuizen in Den Haag heb ik veel expertise opgebouwd om veranderingsprocessen te beoordelen en te adviseren over processen. Voorkomen is beter dan genezen.  Ik ondersteun u graag in de wetenschap dat ik een toegevoegde waarde kan hebben voor mens en organisatie </p>
             </div>
-            <div class="dienst clearfix">                
+            <div class="dienst clearfix">
                 <img src="images/diensten/suitcase.png" alt="">
                 <h3>Interim HR opdrachten</h3>
                 <p class="intro">Is uw manager P&O of uw HR-adviseur voor een langere periode uitgeschakeld? Door mijn brede ervaring ben ik in staat werkzaamheden snel over te nemen. Ik ben beschikbaar voor 3 à 4 dagen in de week.<br>
                 Heeft u behoefte uw afdeling P&O, na vertrek van de manager, opnieuw in te richten?</p>
                 <p>Ik kan de bestaande werkzaamheden voor u blijven uitvoeren en een scan maken van sterke en zwakke punten. Op basis hiervan kan ik een verbeterplan implementeren en ondertussen met u zoeken naar een nieuwe manager of voorbereidingen treffen indien u P&O wil samenvoegen met een ander organisatieonderdeel.</p>
-            </div>
-            <div class="dienst clearfix">
-                <img src="images/diensten/interim-search.png" alt="">
-                <h3>Bureau Interim management zorgmanagers</h3>
-                <p></p>
             </div>
         </div>
     </div>
@@ -98,7 +93,7 @@
     </div>
 
     <?php include 'contact-form.php'; ?>
-    
+
 </div>
 <script src="scripts/vendor/jquery.min.js"></script>
 <script src="scripts/vendor/jquery.validate.min.js"></script>
