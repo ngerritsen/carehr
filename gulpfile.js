@@ -39,7 +39,7 @@ gulp.task('deploy', function () {
     'contact-form.php',
     './**/*.css',
     './styles/fonts/',
-    './scripts/'
+    './scripts/',
     './images/'
   ];
 
