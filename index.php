@@ -46,7 +46,7 @@
     <div class="row" id="intro">
         <div class="wrap">
             <div class="col-sm-6 clearfix">
-                <h2>HR Advies in de Zorg.</h2>
+                <h2>HR Advies in de Zorg</h2>
                 <p>
                     “Mijn visie is dat de beste bedrijfsresultaten worden gerealiseerd in een omgeving waar medewerkers de ruimte krijgen te excelleren.”<br>
  “Ik ben een steunpilaar voor management en zoek vertrouwen bij medewerkers door een transparante wijze van communiceren en het zoeken naar creatieve oplossingen.”
