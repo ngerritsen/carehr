@@ -21,7 +21,6 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 <div class="container-fluid">
-
     <div class="row" id="top-bar">
         <div class="wrap">
             <div class="col-sm-4 col-xs-6 logo-container">
@@ -52,7 +51,6 @@
                     “Mijn visie is dat de beste bedrijfsresultaten worden gerealiseerd in een omgeving waar medewerkers de ruimte krijgen te excelleren.”<br>
  “Ik ben een steunpilaar voor management en zoek vertrouwen bij medewerkers door een transparante wijze van communiceren en het zoeken naar creatieve oplossingen.”
                 </p>
-                <!--<a href="" class="button">Lees Meer</a>-->
             </div>
             <div class="col-sm-6">
                 <img class="fill" src="images/care-icons.png">
