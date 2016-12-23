@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+  font-family: $main-font;
+  color: $dark;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1080px;
+  padding: 42px 21px;
+  margin: 0 auto;
+  @include clearfix;
+}
+
+h2 {
+  font-family: $main-font;
+  font-size: 36px;
+  font-weight: $regular;
+}
+
+h3 {
+  font-family: $main-font;
+  font-size: 24px;
+  font-weight: $semi-bold;
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -1,14 +1,14 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var ftp = require('vinyl-ftp');
-var gutil = require('gulp-util');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var minimist = require('minimist');
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const ftp = require('vinyl-ftp')
+const gutil = require('gulp-util')
+const postcss = require('gulp-postcss')
+const autoprefixer = require('autoprefixer')
+const minimist = require('minimist')
 
-var args = minimist(process.argv.slice(2));
+const args = minimist(process.argv.slice(2))
 
-gulp.task('sass', function () {
+gulp.task('sass', () => {
   return gulp.src('./styles/sass/style.scss')
     .pipe(sass({
        sourceMaps: true
@@ -18,34 +18,34 @@ gulp.task('sass', function () {
         browsers: ['last 3 versions']
       })
     ]))
-    .pipe(gulp.dest('./styles'));
-});
+    .pipe(gulp.dest('./styles'))
+})
 
-gulp.task('default', function () {
+gulp.task('default', () => {
   gulp.watch('./styles/sass/**/*.scss', ['sass'])
-});
+})
 
-gulp.task('deploy', function () {
-  var remotePath = '/public_html/';
-  var conn = ftp.create({
+gulp.task('deploy', () => {
+  const remotePath = '/public_html/'
+  const conn = ftp.create({
     host: 'carehr.nl',
     user: args.user,
     password: args.password,
     log: gutil.log
-  });
+  })
 
-  var files = [
+  const files = [
     'index.php',
     'contact-form.php',
     './**/*.css',
     './styles/fonts/',
     './scripts/',
     './images/'
-  ];
+  ]
 
   gulp.src(files)
     .pipe(conn.newer(remotePath))
-    .pipe(conn.dest(remotePath));
-});
+    .pipe(conn.dest(remotePath))
+})
 
-gulp.task('build', ['sass']);
+gulp.task('build', ['sass'])

@@ -2,11 +2,12 @@
   "name": "carehr",
   "version": "1.0.0",
   "description": "HR advice company in health care",
-  "main": "index.js",
+  "engines": {
+    "node": ">7"
+  },
   "scripts": {
     "build": "gulp build",
-    "watch": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "gulp"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,10 @@
     "autoprefixer": "^6.3.1",
     "gulp": "^3.9.0",
     "gulp-postcss": "^6.0.1",
-    "gulp-sass": "^2.1.1",
+    "gulp-sass": "^3.0.0",
     "gulp-util": "^3.0.7",
     "minimist": "^1.2.0",
-    "vinyl-ftp": "^0.4.5"
-  }
+    "vinyl-ftp": "^0.5.0"
+  },
+  "dependencies": {}
 }

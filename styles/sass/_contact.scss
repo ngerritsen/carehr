@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'mixins';
+
+.contact {
+  background-color: $dark;
+  color: $white;
+
+  form {
+    margin-bottom: 24px;
+  }
+
+  label {
+    font-size: 18px;
+    font-weight: 600;
+    color: darken($white, 20%);
+  }
+
+  label.error {
+    padding-top: 6px;
+    color: $alert-red;
+  }
+
+  .message-container {
+    $height: 40px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: $height;
+    color: $white;
+    z-index: 9999;
+    text-align: center;
+
+    p {
+      height: $height;
+      line-height: $height;
+    }
+
+    .close-message {
+      position: absolute;
+      right: $height/2;
+      top: 0;
+      height: $height;
+      line-height: $height;
+      color: $white;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &.succes {
+      background-color: $care-green;
+    }
+
+    &.error {
+      background-color: $alert-red;
+    }
+  }
+
+  textarea, input {
+    border: 0;
+    box-sizing: border-box;
+    border: 2px solid lighten($dark, 15%);
+
+    &:focus {
+      outline: none;
+      border-color: lighten($dark, 35%);
+      box-shadow: none;
+    }
+
+    &.error {
+      border-color: $alert-red;
+      color: $alert-red;
+    }
+  }
+
+  .button {
+    margin-top: 24px;
+    @include button-border($white);
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 24px;
+
+    &.succes {
+      color: $care-green;
+      font-size: 20px;
+      border-radius: 4px;
+      border: 2px solid $care-green;
+      padding: 6px 12px;
+    }
+  }
+
+  .contact-wrapper {
+    background-color: darken($dark, 4%);
+    border: 2px solid lighten($dark, 4%);
+    border-radius: 8px;
+    @include clearfix;
+
+    p {
+      margin: 18px;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: lighten($care-blue, 30%);
+      }
+    }
+  }
+}
