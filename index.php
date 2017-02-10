@@ -9,7 +9,7 @@
 <meta name=viewport content="width=device-width">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700">
 <link rel="stylesheet" href="styles/style.css">
 
 <body data-spy="scroll" data-target=".js-main-menu" data-offset="-80px">
@@ -87,7 +87,7 @@
             <div class="wrap">
                 <h2>Over</h2>
                 <p>Voor meer informatie over mij, zie:</p>
-                <a href="http://www.carloreeser.nl" class="button">carloreeser.nl</a>
+                <a href="https://www.carloreeser.nl" class="button">carloreeser.nl</a>
             </div>
         </div>
 
@@ -95,7 +95,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
     <script src="scripts/vendor/bootstrap.scrollspy.js"></script>
 
