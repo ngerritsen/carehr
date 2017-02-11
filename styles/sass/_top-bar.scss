@@ -2,16 +2,10 @@
 @import 'mixins';
 
 .top-bar {
-  position: fixed;
   width: 100%;
   height: $nav-height;
   margin: 0;
   z-index: 9999;
-  transition: all 0.8s ease;
-
-  &.narrow {
-    height: $nav-height/1.6;
-  }
 
   .wrap {
     padding: 0 21px;
@@ -25,21 +19,17 @@
   display: table-cell;
   vertical-align: middle;
   height: $nav-height;
-  transition: all 0.8s ease;
+  padding: $spacing-medium 0;
 
   .logo {
-    max-width: 95%;
-    max-height: 95%;
+    width: auto;
+    height: $nav-height - $spacing-large;
     display: inline-block;
   }
 
   &:hover {
     opacity: 0.8;
   }
-}
-
-.narrow .logo-container {
-  height: $nav-height/1.6;
 }
 
 .main-menu {
@@ -61,7 +51,6 @@
 }
 
 .main-menu-item {
-  transition: all 0.8s ease;
   float: left;
   height: $nav-height;
   padding: 35px 0 0;
@@ -84,12 +73,6 @@
   font-size: 18px;
   font-weight: 600;
 }
-
-.narrow .main-menu-item,
-.narrow .mobile {
-  padding: 16px 0 0;
-}
-
 
 @media screen and (max-width: 820px) {
   .nav {

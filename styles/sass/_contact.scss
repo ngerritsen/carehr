@@ -60,11 +60,12 @@
   textarea, input {
     border: 0;
     box-sizing: border-box;
-    border: 2px solid lighten($dark, 15%);
+    border: none;
+    padding: $spacing-small;
 
     &:focus {
       outline: none;
-      border-color: lighten($dark, 35%);
+      border: none;
       box-shadow: none;
     }
 

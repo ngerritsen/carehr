@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  $('body').scrollspy({
-    target: '.js-main-menu'
-  });
-
   $('a[href*="#"]:not([href="#"])')
     .click(function () {
       if (location.pathname.replace(/^\//, ') == this.pathname.replace(/^\//, ') || location.hostname == this.hostname) {
@@ -55,14 +51,4 @@ $(document).ready(function () {
   $('.close-message').click(function(){
     $('.message-container').fadeOut(500);
   });
-
-
-});
-
-$(document).on('scroll',function(){
-  if($(document).scrollTop()>150){
-    $('.js-top-bar').addClass('narrow');
-  } else{
-    $('.js-top-bar').removeClass('narrow');
-  }
 });

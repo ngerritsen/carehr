@@ -12,27 +12,23 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700">
 <link rel="stylesheet" href="styles/style.css">
 
-<body data-spy="scroll" data-target=".js-main-menu" data-offset="-80px">
+<body>
     <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <div class="container-fluid">
-        <div class="row top-bar js-top-bar">
+        <div class="row top-bar">
             <div class="wrap">
                 <div class="col-sm-4 col-xs-6 logo-container">
                     <a href="#home"><img src="images/carehr-logo.png" alt="" class="logo"></a>
                 </div>
                 <nav class="col-sm-8 cols-xs-6 main-menu js-main-menu">
-                <ul class="nav">
-                    <li class="hidden"><a href="#home">Home</a></li>
-                    <li class="main-menu-item"><a href="#services">Diensten</a></li>
-                    <li class="main-menu-item"><a href="#about">Over</a></li>
-                    <li class="main-menu-item"><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="mobile">
-                    <p class="instruction">Scroll Down &#8595;</p>
-                </div>
+                    <ul class="nav">
+                        <li class="main-menu-item"><a href="#services">Diensten</a></li>
+                        <li class="main-menu-item"><a href="#about">Over</a></li>
+                        <li class="main-menu-item"><a href="#contact">Contact</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -95,9 +91,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
-    <script src="scripts/vendor/bootstrap.scrollspy.js"></script>
 
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -108,6 +102,6 @@
         ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js" async></script>
 </body>
 </html>
