@@ -1,4 +1,4 @@
-$main-font: 'Open Sans', Helvetica, Arial, sans-serif;
+$main-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 
 $care-blue: #0077d4;
 $care-green: #46d05d;
@@ -8,13 +8,10 @@ $dark: #333;
 $grey: #979797;
 $white: #fff;
 
-$regular: 400;
-$semi-bold: 600;
-$bold: 700;
+$nav-height: 12rem;
 
-$nav-height: 120px;
-
-$spacing-medium: 21px;
+$spacing-medium: 2.1rem;
 $spacing-small: $spacing-medium / 2;
 $spacing-x-small: $spacing-small / 2;
 $spacing-large: $spacing-medium * 2;
+$spacing-x-large: $spacing-large * 2;

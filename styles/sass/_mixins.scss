@@ -5,46 +5,11 @@
 @mixin clearfix() {
   &:before,
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
   }
 
   &:after {
     clear: both;
-  }
-}
-
-@mixin button-border($color) {
-  @extend %reset-spacing;
-
-  border-radius: 8px;
-  padding: 0 18px;
-  height: 38px;
-  line-height: 32px;
-  font-size: 16px;
-  font-weight: $semi-bold;
-  display: inline-block;
-  box-sizing: border-box;
-  transition: all 0.2s ease;
-  color: $color;
-  border: 3px solid $color;
-  background-color: transparent;
-
-  &:hover {
-    text-decoration: none;
-    opacity: 0.8;
-  }
-
-  @if lightness($color) > 50% {
-    &:hover {
-      color: darken($color, 35%);
-      border-color: darken($color, 35%);
-    }
-  }
-  @else {
-    &:hover {
-      color: lighten($color, 35%);
-      border-color: lighten($color, 35%);
-    }
   }
 }

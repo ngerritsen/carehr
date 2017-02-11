@@ -22,7 +22,7 @@ gulp.task('js', () => {
     .pipe(gulp.dest('./'))
 })
 
-gulp.task('default', () => {
+gulp.task('default', ['sass', 'js'], () => {
   gulp.watch('./styles/sass/**/*.scss', ['sass'])
   gulp.watch('./styles/scripts/**/*.js', ['js'])
 })

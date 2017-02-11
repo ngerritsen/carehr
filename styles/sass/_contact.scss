@@ -1,115 +1,115 @@
 @import 'variables';
 @import 'mixins';
 
-.contact {
-  background-color: $dark;
+.contact__form {
+  margin-bottom: $spacing-medium;
+}
+
+.label {
+  display: inline-block;
+  font-size: 18px;
+  color: darken($white, 10%);
+  margin-bottom: 0.6rem;
+}
+
+label.error {
+  display: inline-block;
+  position: relative;
+  top: -$spacing-medium * 0.8;
+  color: $alert-red;
+}
+
+.message-container {
+  $height: 40px;
+
+  position: fixed;
+  width: 100%;
+  top: 0px;
   color: $white;
+  z-index: 9999;
+  text-align: center;
 
-  form {
-    margin-bottom: $spacing-medium;
+  .message {
+    margin: 0;
+    padding: $spacing-small;
   }
 
-  label {
-    font-size: 18px;
-    font-weight: 600;
-    color: darken($white, 20%);
+  .close-message {
+    position: absolute;
+    right: $height/2;
+    top: 0;
+    height: $height;
+    line-height: $height;
+    color: $white;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
-  label.error {
-    padding-top: 6px;
+  &.succes {
+    background-color: $care-green;
+  }
+
+  &.error {
+    background-color: $alert-red;
+  }
+}
+
+.contact__form-control {
+  border: 0;
+  box-sizing: border-box;
+  border: none;
+  padding: $spacing-small;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: $spacing-medium;
+  font-size: 1.4rem;
+
+  &:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  &.error {
+    border-color: $alert-red;
     color: $alert-red;
   }
+}
 
-  .message-container {
-    $height: 40px;
+p.succes {
+  color: $care-green;
+  font-size: 20px;
+  border-radius: 4px;
+  border: 2px solid $care-green;
+  padding: $spacing-x-small $spacing-small;
+}
 
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    height: $height;
-    color: $white;
-    z-index: 9999;
-    text-align: center;
+.contact__options {
+  background-color: darken($dark, 4%);
+  border: 2px solid lighten($dark, 4%);
+  border-radius: 8px;
+}
 
-    p {
-      height: $height;
-      line-height: $height;
-    }
+.contact__option-content {
+  padding: $spacing-x-small $spacing-medium;
+}
 
-    .close-message {
-      position: absolute;
-      right: $height/2;
-      top: 0;
-      height: $height;
-      line-height: $height;
-      color: $white;
+.contact__option-link {
+  color: $white;
 
-      &:hover {
-        opacity: 0.7;
-      }
-    }
+  &:hover {
+    color: lighten($care-blue, 30%);
+  }
+}
 
-    &.succes {
-      background-color: $care-green;
-    }
-
-    &.error {
-      background-color: $alert-red;
-    }
+@media screen and (min-width: 720px) {
+  .contact__options {
+    display: flex;
   }
 
-  textarea, input {
-    border: 0;
-    box-sizing: border-box;
-    border: none;
-    padding: $spacing-small;
-
-    &:focus {
-      outline: none;
-      border: none;
-      box-shadow: none;
-    }
-
-    &.error {
-      border-color: $alert-red;
-      color: $alert-red;
-    }
-  }
-
-  .button {
-    margin-top: $spacing-medium;
-    @include button-border($white);
-  }
-
-  p {
-    font-size: 18px;
-    margin-bottom: $spacing-medium;
-
-    &.succes {
-      color: $care-green;
-      font-size: 20px;
-      border-radius: 4px;
-      border: 2px solid $care-green;
-      padding: $spacing-x-small $spacing-small;
-    }
-  }
-
-  .contact-wrapper {
-    background-color: darken($dark, 4%);
-    border: 2px solid lighten($dark, 4%);
-    border-radius: 8px;
-    @include clearfix;
-
-    p {
-      margin: 18px;
-    }
-
-    a {
-      color: $white;
-
-      &:hover {
-        color: lighten($care-blue, 30%);
-      }
-    }
+  .contact__option {
+    width: 40%;
   }
 }

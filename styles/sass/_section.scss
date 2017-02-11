@@ -1,0 +1,12 @@
+.section {
+  padding: $spacing-large 0;
+}
+
+.section--grey {
+  background: darken($white, 10%);
+}
+
+.section--dark {
+  background-color: $dark;
+  color: $white;
+}

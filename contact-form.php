@@ -65,69 +65,68 @@ if(isset($_POST['submitform'])) {
 
 ?>
 
-<div class="row contact" id="contact">
+<div class="row section section--dark" id="contact">
     <?php
     if($sent === true) {
         echo "<div class='message-container succes'>";
         echo "<p class='message'><span class='glyphicon glyphicon-ok'></span> Uw bericht is met succes verzonden!</p>";
-        echo "<a href='javascript: void(0)' class='close-message'><span class='glyphicon glyphicon-remove'></span></a></div>";
+        echo "<a href='javascript: void(0)' class='close-message'>x</a></div>";
     } elseif ($hasError === true) {
         echo "";
         echo "<div class='message-container error'><ul class='error-list message'>";
         foreach ($errorArray as $key => $val) {
             echo "<li class='error'>" . ucfirst($key) . "field error - $val</li>";
         }
-        echo "</ul><a href='javascript: void(0)' class='close-message'><span class='glyphicon glyphicon-remove'></span></a></div>";
+        echo "</ul><a href='javascript: void(0)' class='close-message'>x</a></div>";
     } elseif($submitted === true && $sent === false && $hasError === false) {
         echo "<div class='message-container error'>";
         echo "<p class='message'><span class='glyphicon glyphicon-warning-sign'></span> Uw bericht is helaas niet verzonden!</p>";
-        echo "<a href='javascript: void(0)' class='close-message'><span class='glyphicon glyphicon-remove'></span></a></div>";
+        echo "<a href='javascript: void(0)' class='close-message'>x</a></div>";
     }
     ?>
 
-    <div class="wrap">
+    <div class="container">
         <h2>Contact</h2>
         <p>Vul hieronder uw gegevens en uw bericht in en ik zal u zo snel mogelijk beantwoorden!</p>
 
-        <form class="form-horizontal" method="post" id="contact-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" string";" novalidate>
-
-
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Naam:</label>
-                <div class="col-sm-10">
-                    <input type="text" name="name" value="<?php echo (isset($name) ? $name : ""); ?>" class="form-control" placeholder="John Doe">
-                </div>
+        <form class="contact__form" method="post" id="contact-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" string";" novalidate>
+            <div>
+                <label class="label">Naam:</label>
+                <input type="text" name="name" value="<?php echo (isset($name) ? $name : ""); ?>" class="contact__form-control" placeholder="John Doe">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Email:</label>
-                <div class="col-sm-10">
-                    <input type="email" name="email" value="<?php echo (isset($email) ? $email : ""); ?>" class="form-control" placeholder="voorbeeld@adres.com">
-                </div>
+            <div>
+                <label class="label">Email:</label>
+                <input type="email" name="email" value="<?php echo (isset($email) ? $email : ""); ?>" class="contact__form-control" placeholder="voorbeeld@adres.com">
             </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Onderwerp:</label>
-                <div class="col-sm-10">
-                    <input type="text" name="subject" value="<?php echo (isset($subject) ? $subject : ""); ?>" class="form-control" placeholder="Onderwerp">
-                </div>
+            <div>
+                <label class="label">Onderwerp:</label>
+                <input type="text" name="subject" value="<?php echo (isset($subject) ? $subject : ""); ?>" class="contact__form-control" placeholder="Onderwerp">
             </div>
 
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Bericht:</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control" name="message" placeholder="Uw bericht..." rows="5"><?php echo (isset($message) ? $message : ""); ?></textarea>
-                </div>
+            <div>
+                <label class="label">Bericht:</label>
+                <textarea class="contact__form-control" name="message" placeholder="Uw bericht..." rows="5"><?php echo (isset($message) ? $message : ""); ?></textarea>
             </div>
 
-            <input type="submit" value="Versturen" name="submitform" class="btn button">
+            <input type="submit" value="Versturen" name="submitform" class="button button--on-dark">
         </form>
 
         <p>U kunt ook zelf een email sturen of telefonisch contact opnemen:</p>
-        <div class="contact-wrapper">
-            <div class="col-sm-6">
-                <p><a href="mailto:info@carehr.nl"><span class="glyphicon glyphicon-envelope"></span> info@carehr.nl</a></p>
+
+        <div class="contact__options">
+            <div class="contact__option">
+                <p class="contact__option-content">
+                    <a href="mailto:info@carehr.nl" class="contact__option-link">
+                        <span class="glyphicon glyphicon-envelope"></span> info@carehr.nl
+                    </a>
+                </p>
             </div>
-            <div class="col-sm-6">
-                <p><a href="tel:+31642468484"><span class="glyphicon glyphicon-phone"></span> (06) 42 46 84 84</a></p>
+            <div class="contact__option">
+                <p class="contact__option-content">
+                    <a href="tel:+31642468484" class="contact__option-link">
+                        <span class="glyphicon glyphicon-phone"></span> (06) 42 46 84 84
+                    </a>
+                </p>
             </div>
         </div>
     </div>

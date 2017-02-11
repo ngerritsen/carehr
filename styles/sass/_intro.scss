@@ -1,0 +1,12 @@
+@import 'variables';
+
+.intro {
+  background-color: $dark;
+  color: $white;
+
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}

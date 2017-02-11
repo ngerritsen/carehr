@@ -1,0 +1,34 @@
+@import 'variables';
+
+.service {
+  margin-bottom: $spacing-large + $spacing-small;
+
+  img {
+    max-width: 25%;
+    height: auto;
+  }
+
+  &:nth-child(2n+0) {
+    text-align: left;
+
+    img {
+      float: left;
+      margin-right: 24px;
+    }
+  }
+
+  &:nth-child(2n+1) {
+    img {
+      float: right;
+      margin-left: 24px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.service-intro {
+  font-weight: bold;
+}
