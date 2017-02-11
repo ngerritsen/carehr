@@ -1,6 +1,9 @@
-$(document).ready(function () {
+import $ from 'jquery'
+import 'jquery-validation'
+
+$(document).ready(() => {
   $('a[href*="#"]:not([href="#"])')
-    .click(function () {
+    .click(() => {
       if (location.pathname.replace(/^\//, ') == this.pathname.replace(/^\//, ') || location.hostname == this.hostname) {
         var a = $(this.hash);
         if (a = a.length ? a : $('[name=' + this.hash.slice(1) + ']'), a.length) return $('html,body').animate({

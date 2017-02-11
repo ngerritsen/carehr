@@ -9,3 +9,4 @@ after_success:
   - curl -3 -T contact-form.php ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/
   - curl -3 -T style.css ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/
   - curl -3 -T main.js ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/
+  - find optimized-images -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/images/

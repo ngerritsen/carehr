@@ -6,10 +6,14 @@
     "node": ">7"
   },
   "scripts": {
-    "build": "gulp build",
-    "watch": "gulp",
+    "build": "npm run images; npm run js; npm run sass",
+    "js": "NODE_ENV=production webpack",
+    "js:watch": "NODE_ENV=development webpack",
+    "sass": "node-sass ./styles/sass/style.scss --output-style compressed | postcss --use autoprefixer -o ./style.css",
+    "sass:watch": "npm run sass:dev; node-sass ./styles/sass/style.scss -o ./ --watch --source-map-embed",
+    "sass:dev": "node-sass ./styles/sass/style.scss -o ./ --source-map-embed",
     "start": "php -S localhost:8081",
-    "deploy": "gulp deploy --user $FTP_USER --password $FTP_PASSWORD"
+    "images": "node ./optimizeImages.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +27,24 @@
   "homepage": "https://github.com/ngerritsen/carehr#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.1",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
     "gulp": "^3.9.0",
     "gulp-postcss": "^6.0.1",
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.1",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "node-sass": "^4.5.0",
+    "postcss-cli": "^2.6.0",
+    "webpack": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-validation": "^1.16.0"
+  },
+  "browserslist": [
+    "ie >= 10",
+    "last 2 versions"
+  ]
 }
