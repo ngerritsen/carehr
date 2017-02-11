@@ -8,6 +8,7 @@
   "scripts": {
     "build": "gulp build",
     "watch": "gulp",
+    "start": "php -S localhost:8081",
     "deploy": "gulp deploy --user $FTP_USER --password $FTP_PASSWORD"
   },
   "repository": {
@@ -25,9 +26,8 @@
     "gulp": "^3.9.0",
     "gulp-postcss": "^6.0.1",
     "gulp-sass": "^3.0.0",
-    "gulp-util": "^3.0.7",
-    "minimist": "^1.2.0",
-    "vinyl-ftp": "^0.5.0"
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.7"
   },
   "dependencies": {}
 }

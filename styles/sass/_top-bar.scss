@@ -5,15 +5,11 @@
   width: 100%;
   height: $nav-height;
   margin: 0;
-  z-index: 9999;
 
   .wrap {
-    padding: 0 21px;
+    padding: 0 $spacing-medium;
   }
-
-  background-color: rgba(249,249,249,0.85);
 }
-
 
 .logo-container {
   display: table-cell;
@@ -65,7 +61,7 @@
 .mobile {
   display: none;
   float: right;
-  padding-top: 22px;
+  padding-top: $spacing-medium;
 }
 
 .instruction {

@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700">
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="style.css">
 
 <body>
     <!--[if lt IE 10]>
@@ -102,6 +102,6 @@
         ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-    <script src="scripts/main.js" async></script>
+    <script src="main.js" async></script>
 </body>
 </html>
