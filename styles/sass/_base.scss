@@ -26,10 +26,7 @@ p {
   @include clearfix;
 
   overflow: hidden;
-
-  max-width: 920px;
-  padding: 0 $spacing-large;
-  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 h2 {
@@ -56,4 +53,10 @@ a:focus {
 
 a:hover {
   cursor: pointer;
+}
+
+@media screen and (min-width: 720px) {
+  max-width: 920px;
+  padding: 0 3rem;
+  margin: 0 auto;
 }
