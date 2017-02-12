@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <meta charset="utf-8">
 
 <title>CareHR</title>
 
-<meta name=description content="">
+<meta name=description content="HR Advies in de Zorg">
 <meta name=viewport content="width=device-width">
 
 <style>
-    <?= file_get_contents(__DIR__ . '/style.css') ?>
+    <?= file_get_contents(__DIR__ . '/css/style.css') ?>
 </style>
 
-<script src="main.js" async></script>
+<script src="js/bundle.js" async></script>
 
 <link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" as="style" onload="this.rel='stylesheet'">
 
@@ -18,8 +19,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
 </noscript>
 
-<!--[if lt IE 10]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<!--[if lte IE 11]>
+    <p style="z-index: 9999; background-color: #f5f5f5; padding: 20px; margin: 0">
+        Sorry, but I do not support your version of Internet Explorer.
+        <a href="http://browsehappy.com/" target="_blank">Click here to upgrade your browser.</a>
+    </p>
 <![endif]-->
 
 <div class="top-bar">

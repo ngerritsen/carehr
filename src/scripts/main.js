@@ -4,13 +4,15 @@ import 'jquery-validation'
 $(document).ready(() => {
   $('a[href*="#"]:not([href="#"])')
     .click(() => {
+      /* eslint-disable */
       if (location.pathname.replace(/^\//, ') == this.pathname.replace(/^\//, ') || location.hostname == this.hostname) {
         var a = $(this.hash);
         if (a = a.length ? a : $('[name=' + this.hash.slice(1) + ']'), a.length) return $('html,body').animate({
           scrollTop: a.offset().top
         }, 1e3), !1;
       }
-    });
+      /* eslint-enable */
+    })
 
   $('#contact-form').validate({
     rules: {
@@ -49,9 +51,9 @@ $(document).ready(() => {
         minlength: 'Uw bericht moet minimaal 10 tekens bevatten.'
       }
     }
-  });
+  })
 
-  $('.close-message').click(function(){
-    $('.message-container').fadeOut(500);
-  });
-});
+  $('.close-message').click(() => {
+    $('.message-container').fadeOut(500)
+  })
+})

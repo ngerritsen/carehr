@@ -1,8 +1,4 @@
-styles/style.css
-styles/.sass-cache
+.tmp
 node_modules
-index.html
-main.js
-style.css
-optimized-images
+dist
 .DS_Store

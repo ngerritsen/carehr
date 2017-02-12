@@ -56,7 +56,9 @@ a:hover {
 }
 
 @media screen and (min-width: 720px) {
-  max-width: 920px;
-  padding: 0 3rem;
-  margin: 0 auto;
+  .container {
+    max-width: 920px;
+    padding: 0 3rem;
+    margin: 0 auto;
+  }
 }
