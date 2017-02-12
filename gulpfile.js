@@ -81,7 +81,7 @@ gulp.task('serve', plugins.shell.task('php -S localhost:8081', {
 gulp.task('build', ['php', 'sass', 'images', 'js', 'lint'])
 
 gulp.task('watch', () => {
-  gulp.watch('./src/styles/**/*.css', ['sass'])
+  gulp.watch('./src/styles/**/*.scss', ['sass'])
   gulp.watch('./src/scripts/**/*.js', ['js', 'lint'])
   gulp.watch('./src/images/**', ['images'])
   gulp.watch('./src/*.php', ['php'])
