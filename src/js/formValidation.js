@@ -1,6 +1,4 @@
-'use strict';
-
-ready(() => {
+export default function initFormValidation() {
   const form = document.querySelector('[data-form-validation]');
   const formSections = [...document.querySelectorAll('[data-form-section]')];
 
@@ -11,7 +9,7 @@ ready(() => {
       event.preventDefault();
     }
   })
-});
+}
 
 function validateForm(formSections) {
   const name = getFormInput(formSections, 'name');
@@ -86,17 +84,4 @@ function getFormInput(formSections, name) {
     container: el,
     value: field.value
   }
-}
-
-function ready(fn) {
-  if (
-    document.attachEvent
-      ? document.readyState === 'complete'
-      : document.readyState !== 'loading'
-  ) {
-    fn();
-    return;
-  }
-
-  document.addEventListener('DOMContentLoaded', fn);
 }

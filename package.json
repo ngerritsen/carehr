@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./build.js --production",
-    "watch": "node ./build.js; watch-run -p './src/*,./templates/*,./data.js' node ./build.js"
+    "build": "NODE_ENV=production node ./build.js; npm run build:js",
+    "watch": "node ./build.js; watch-run -p './src/*,./templates/*,./data.js' node ./build.js",
+    "build:js": "NODE_ENV=production webpack",
+    "watch:js": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,22 @@
   },
   "homepage": "https://github.com/ngerritsen/carehr#readme",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "cssnano": "^3.10.0",
     "ejs": "^2.5.7",
     "postcss": "^6.0.16",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
-    "watch-run": "^1.2.5"
+    "watch-run": "^1.2.5",
+    "webpack": "^3.10.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions"
+  ],
+  "babel": {
+    "presets": ["env"]
   }
 }

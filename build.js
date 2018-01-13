@@ -7,32 +7,24 @@ const atImport = require("postcss-import")
 const cssnano = require('cssnano');
 const ejs = require('ejs');
 
-const data = require('./data');
-
-const templatePath = 'templates/index.ejs';
+const templatePath = 'src/templates/index.ejs';
 const htmlFileOutputPath = 'index.html';
-const cssFileInputPath = 'src/style.css';
+const cssFileInputPath = 'src/css/style.css';
 
-const production = process.argv.includes('--production');
+const production = process.env.NODE_ENV === 'production';
 
 run();
 
 async function run() {
-  let minifiedCss = '';
+  let css = await readFile(cssFileInputPath);
 
-  if (production) {
-    const css = await readFile(cssFileInputPath);
+  css = await postcss([cssnano])
+    .use(atImport())
+    .process(css, { from: cssFileInputPath });
 
-    minifiedCss = await postcss([cssnano])
-      .use(atImport())
-      .process(css, { from: cssFileInputPath });
-  }
-
-  const html = await renderTemplate('./templates/index.ejs', {
-    ...data,
-    css: minifiedCss,
-    cssPath: cssFileInputPath,
-    inlineCss: production
+  const html = await renderTemplate(templatePath, {
+    ...require('./data'),
+    css
   });
 
   await writeFile(path.join(htmlFileOutputPath), html);
@@ -45,7 +37,7 @@ async function run() {
 function renderTemplate(filePath, data) {
   return new Promise((resolve, reject) => {
     ejs.renderFile(filePath, data, {}, (err, html) => {
-      err ? reject(er) : resolve(html);
+      err ? reject(err) : resolve(html);
     });
   });
 }
