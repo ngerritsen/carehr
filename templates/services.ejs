@@ -1,0 +1,12 @@
+<section class="section">
+  <div class="container">
+    <h2>Diensten</h2>
+    <p class="sub-title">Professioneel HR advies in de zorg.</p>
+
+    <% services.forEach((service) => { %>
+      <h3><%= service.title %></h3>
+      <p><strong><%= service.intro %></strong></p>
+      <p><%= service.content %></p>
+    <% }) %>
+  </div>
+</section>

@@ -32,6 +32,12 @@ label {
   margin-bottom: 1.6rem;
 }
 
+.form-error {
+  font-size: 1.4rem;
+  margin-top: 0.4rem;
+  color: red;
+}
+
 @media screen and (min-width: 620px) {
   .form-inline {
     display: flex;
