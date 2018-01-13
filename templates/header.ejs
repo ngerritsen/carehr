@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="Professioneel HR advies in de zorg.">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rubik" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+    <% if (inlineCss) { %>
+      <%- '<style>' + css + '</style>' %>
+    <% } else { %>
+      <link rel="stylesheet" href="<%- cssPath %>">
+    <% } %>
+  </head>
+  <body>
+    <header class="section section--header">
+      <div class="container">
+        <div class="title-container">
+          <h1 class="title">Care<span class="title__postfix">HR</span></h1>
+          <span class="headline">Professioneel HR advies in de zorg.</span>
+        </div>
+      </div>
+    </header>

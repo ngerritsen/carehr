@@ -1,0 +1,14 @@
+:root {
+  --primary: #3a8efc;
+  --secondary: #17519e;
+  --secondary-hover: #13488e;
+  --white: #fff;
+  --background: #fdfdfd;
+  --foreground: #222;
+  --shadow: #aaa;
+  --grey: #626872;
+  --lightGrey: #eee;
+
+  --titleFont: 'Rubik', Helvetica, Arial, sans-serif;
+  --mainFont: 'Open Sans', Helvetica, Arial, sans-serif;
+}

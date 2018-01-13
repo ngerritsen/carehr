@@ -1,0 +1,34 @@
+.button {
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  padding: 0 4rem;
+  color: var(--white);
+  background-color: var(--secondary);
+  transition: background-color 0.2s ease;
+  font-size: 1.6rem;
+  height: 5rem;
+  line-height: 5rem;
+  border: 0;
+  border-radius: 0;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: var(--secondary-hover);
+}
+
+@media screen and (min-width: 620px) {
+  .button {
+    width: auto;
+  }
+
+  .button--full-width {
+    width: 100%;
+  }
+}

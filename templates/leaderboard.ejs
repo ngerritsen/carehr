@@ -1,0 +1,26 @@
+<section class="section section--primary">
+  <div class="container">
+    <h2>HR check in de zorg</h2>
+    <p class="sub-title">Een quickscan analyse van het functioneren en de beleving van HR in uw organisatie.</p>
+
+    <p>De quickscan bestaat uit het in korte tijd verzamelen van gegevens op alle gebied in
+de organisatie of HR afdeling. Door middel van een aantal interviews in de
+organisatie met HR-professionals, medewerkers, lijnmanagers, OR-leden en directie
+wordt snel eenvoudig duidelijk:</p>
+
+    <ul class="check-list">
+      <% [
+        'Wat verwachten klanten van HR?',
+        'Hoe tevreden zijn de klanten over HR?',
+        'Wat kan beter, anders en wat blijft er liggen?'
+      ].forEach((item) => { %>
+        <li class="icon-with-text">
+          <i class="fas fa-check-circle"></i>
+          <span><%= item %></span>
+        </li>
+      <% }) %>
+    </ul>
+
+    <a href="#contact" class="button">Neem contact op</a>
+  </div>
+</section>

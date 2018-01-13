@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./build.js --production",
-    "watch": "node ./build.js; watch-run -p 'index.ejs,style.css' node ./build.js"
+    "watch": "node ./build.js; watch-run -p './src/*,./templates/*,./data.js' node ./build.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,9 @@
   "dependencies": {
     "cssnano": "^3.10.0",
     "ejs": "^2.5.7",
-    "html-minifier": "^3.5.8",
-    "just-wait": "^1.0.11",
     "postcss": "^6.0.16",
-    "watch": "^1.0.2"
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "watch-run": "^1.2.5"
   }
 }

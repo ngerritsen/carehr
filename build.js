@@ -3,31 +3,33 @@
 const fs = require('fs');
 const path = require('path');
 const postcss = require('postcss');
+const atImport = require("postcss-import")
 const cssnano = require('cssnano');
-const htmlMinifier = require('html-minifier');
 const ejs = require('ejs');
 
-const templatePath = 'index.ejs';
+const data = require('./data');
+
+const templatePath = 'templates/index.ejs';
 const htmlFileOutputPath = 'index.html';
-const cssFileInputPath = 'style.css';
+const cssFileInputPath = 'src/style.css';
 
 const production = process.argv.includes('--production');
 
 run();
 
 async function run() {
-  const [template, css] = await Promise.all([
-    readFile(templatePath),
-    production && readFile(cssFileInputPath)
-  ]);
-
   let minifiedCss = '';
 
   if (production) {
-    minifiedCss = await postcss([cssnano]).process(css, { from: undefined });
+    const css = await readFile(cssFileInputPath);
+
+    minifiedCss = await postcss([cssnano])
+      .use(atImport())
+      .process(css, { from: cssFileInputPath });
   }
 
-  const html = ejs.render(template, {
+  const html = await renderTemplate('./templates/index.ejs', {
+    ...data,
     css: minifiedCss,
     cssPath: cssFileInputPath,
     inlineCss: production
@@ -40,14 +42,18 @@ async function run() {
   console.log(`Wrote output to ${htmlFileOutputPath} (${size / 1000} kB)`);
 }
 
+function renderTemplate(filePath, data) {
+  return new Promise((resolve, reject) => {
+    ejs.renderFile(filePath, data, {}, (err, html) => {
+      err ? reject(er) : resolve(html);
+    });
+  });
+}
+
 function writeFile(filePath, contents) {
   return new Promise((resolve, reject) => {
     fs.writeFile(filePath, contents, (err, res) => {
-      if (err) {
-        reject(err);
-      }
-
-      resolve(res);
+      err ? reject(err) : resolve(res);
     });
   });
 }
@@ -55,11 +61,7 @@ function writeFile(filePath, contents) {
 function readFile(filepath) {
   return new Promise((resolve, reject) => {
     fs.readFile(filepath, 'utf-8', (err, contents) => {
-      if (err) {
-        reject(err);
-      }
-
-      resolve(contents);
+      err ? reject(err) : resolve(contents);
     });
   });
 }

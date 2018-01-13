@@ -1,0 +1,23 @@
+<section class="section">
+  <div class="container">
+    <h2>Even voorstellen</h2>
+    <p class="sub-title">Wie zijn wij?</p>
+
+    <%- include('quote', {
+      text: 'Onze visie is dat de beste bedrijfsresultaten worden gerealiseerd in een omgeving waar medewerkers de ruimte krijgen te excelleren.'
+    }) %>
+
+    <p>Onze consultants zijn voormalige HR managers uit de ziekenhuis- en revalidatie sector en hebben jaren lange ervaring in het management in de zorgsector in Nederland.</p>
+
+    <div class="profiles">
+      <% profiles.forEach((profile) => { %>
+        <div class="profile">
+          <figure class="profile__image" style="background-image: url(img/<%= profile.image %>)"></figure>
+          <a class="profile__name" target="_blank" href="<%= profile.linkedin %>">
+            <i class="fab fa-linkedin"></i> &nbsp; <%= profile.name %>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

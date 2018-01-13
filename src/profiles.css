@@ -1,0 +1,48 @@
+.profile {
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 5px var(--shadow);
+  margin-bottom: 1.6rem;
+}
+
+.profile__image {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 28rem;
+  background-color: var(--grey);
+  background-size: cover;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.profile__name,
+.profile__name:visited {
+  display: block;
+  opacity: 0.8;
+  background-color: white;
+  text-align: center;
+  padding: 1.6rem;
+  color: #17519e;
+  text-decoration: none;
+  border-radius: 0.4rem;
+}
+
+.profile__name:hover,
+.profile__name:focus {
+  cursor: pointer;
+  opacity: 1;
+}
+
+@media screen and (min-width: 620px) {
+  .profiles {
+    display: flex;
+  }
+
+  .profile {
+    width: 33%;
+    margin-right: 1.6rem;
+  }
+
+  .profile:last-child {
+    margin-right: 0;
+  }
+}
