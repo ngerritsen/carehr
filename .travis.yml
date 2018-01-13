@@ -1,12 +1,3 @@
 language: node_js
 node_js:
-  - "7"
-cache: yarn
-script:
-  - yarn build
-after_success:
-  - curl -3 -T dist/index.php ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/
-  - curl -3 -T dist/contact-form.php ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/
-  - find dist/images -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/images/ \;
-  - find dist/js -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/js/ \;
-  - find dist/css -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/css/ \;
+  - "8"

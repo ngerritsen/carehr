@@ -1,14 +1,10 @@
 {
   "name": "carehr",
   "version": "1.0.0",
-  "description": "HR advice company in health care",
-  "engines": {
-    "node": ">7"
-  },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "gulp build",
-    "watch": "gulp",
-    "start": "cd .tmp; php -S localhost:8081"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,43 +16,9 @@
     "url": "https://github.com/ngerritsen/carehr/issues"
   },
   "homepage": "https://github.com/ngerritsen/carehr#readme",
-  "devDependencies": {
-    "autoprefixer": "^6.7.2",
-    "babel-core": "^6.22.1",
-    "babel-loader": "^6.2.10",
-    "babel-preset-env": "^1.1.8",
-    "babelify": "^7.3.0",
-    "browserify": "^14.0.0",
-    "gulp": "^3.9.1",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-postcss": "^6.3.0",
-    "gulp-sass": "^3.0.0",
-    "gulp-shell": "^0.5.2",
-    "gulp-uglify": "^2.0.1",
-    "gulp-util": "^3.0.8",
-    "imagemin": "^5.2.2",
-    "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-pngquant": "^5.0.0",
-    "node-sass": "^4.5.0",
-    "postcss-cli": "^2.6.0",
-    "run-sequence": "^1.2.2",
-    "uglifyify": "^3.0.4",
-    "vinyl-source-stream": "^1.1.0",
-    "webpack": "^2.2.1"
-  },
   "dependencies": {
-    "eslint": "^3.15.0",
-    "eslint-config-ngerritsen": "^1.0.2",
-    "eslint-plugin-filenames": "^1.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "gulp-eslint": "^3.0.1",
-    "jquery": "^3.1.1",
-    "jquery-validation": "^1.16.0"
-  },
-  "browserslist": [
-    "ie >= 10",
-    "last 2 versions"
-  ]
+    "cssnano": "^3.10.0",
+    "html-minifier": "^3.5.8",
+    "postcss": "^6.0.16"
+  }
 }
