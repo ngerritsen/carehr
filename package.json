@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./build.js"
+    "build": "node ./build.js --production",
+    "watch": "node ./build.js; watch-run -p 'index.ejs,style.css' node ./build.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,10 @@
   "homepage": "https://github.com/ngerritsen/carehr#readme",
   "dependencies": {
     "cssnano": "^3.10.0",
+    "ejs": "^2.5.7",
     "html-minifier": "^3.5.8",
-    "postcss": "^6.0.16"
+    "just-wait": "^1.0.11",
+    "postcss": "^6.0.16",
+    "watch": "^1.0.2"
   }
 }

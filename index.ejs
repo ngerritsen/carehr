@@ -7,7 +7,11 @@
     <title>CareHR</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rubik" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <% if (inlineCss) { %>
+      <%- '<style>' + css + '</style>' %>
+    <% } else { %>
+      <link rel="stylesheet" href="<%- cssPath %>">
+    <% } %>
   </head>
   <body>
     <header class="section section--header">
@@ -18,7 +22,6 @@
         </div>
       </div>
     </header>
-
     <section class="section section--primary">
       <div class="container">
         <h2>HR check in de zorg</h2>
@@ -29,11 +32,14 @@ de organisatie of HR afdeling. Door middel van een aantal interviews in de
 organisatie met HR-professionals, medewerkers, lijnmanagers, OR-leden en directie
 wordt snel eenvoudig duidelijk:</p>
 
-
         <ul class="check-list">
-          <li><i class="fas fa-check-circle"></i> &nbsp; Wat verwachten klanten van HR?</li>
-          <li><i class="fas fa-check-circle"></i> &nbsp; Hoe tevreden zijn de klanten over HR?</li>
-          <li><i class="fas fa-check-circle"></i> &nbsp; Wat kan beter, anders en wat blijft er liggen?</li>
+          <% [
+            'Wat verwachten klanten van HR?',
+            'Hoe tevreden zijn de klanten over HR?',
+            'Wat kan beter, anders en wat blijft er liggen?'
+          ].forEach((item) => { %>
+            <li><i class="fas fa-check-circle"></i> &nbsp; <%= item %></li>
+          <% }) %>
         </ul>
 
         <a href="#contact" class="button">Neem contact op</a>

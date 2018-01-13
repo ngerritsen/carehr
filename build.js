@@ -5,26 +5,37 @@ const path = require('path');
 const postcss = require('postcss');
 const cssnano = require('cssnano');
 const htmlMinifier = require('html-minifier');
+const ejs = require('ejs');
 
-const htmlFileInputPath = 'index.src.html';
+const templatePath = 'index.ejs';
 const htmlFileOutputPath = 'index.html';
 const cssFileInputPath = 'style.css';
-const linkTag = '<link rel="stylesheet" href="style.css">';
+
+const production = process.argv.includes('--production');
 
 run();
 
 async function run() {
-  const [html, css] = await Promise.all([
-    readFile(htmlFileInputPath),
-    readFile(cssFileInputPath)
+  const [template, css] = await Promise.all([
+    readFile(templatePath),
+    production && readFile(cssFileInputPath)
   ]);
 
-  const minifiedCss = await postcss([cssnano]).process(css, { from: undefined });
-  const htmlWithCss = html.replace(linkTag, `<style>\n${minifiedCss}\n</style>`);
+  let minifiedCss = '';
 
-  await writeFile(path.join(htmlFileOutputPath), htmlWithCss);
+  if (production) {
+    minifiedCss = await postcss([cssnano]).process(css, { from: undefined });
+  }
 
-  const size = Buffer.byteLength(htmlWithCss, 'utf8')
+  const html = ejs.render(template, {
+    css: minifiedCss,
+    cssPath: cssFileInputPath,
+    inlineCss: production
+  });
+
+  await writeFile(path.join(htmlFileOutputPath), html);
+
+  const size = Buffer.byteLength(html, 'utf8')
 
   console.log(`Wrote output to ${htmlFileOutputPath} (${size / 1000} kB)`);
 }
