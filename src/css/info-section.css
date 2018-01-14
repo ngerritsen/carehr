@@ -1,0 +1,27 @@
+@media screen and (min-width: 620px) {
+  .info-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.6rem;
+  }
+
+  .info-section__illustration {
+    -webkit-box-flex: 0;
+    max-width: 33%;
+    flex: 0 0 33%;
+    padding: 0 1.6rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-section__info {
+    -webkit-box-flex: 0;
+    max-width: 67%;
+    flex: 0 0 67%;
+    padding: 0 1.6rem;
+  }
+
+  .info-section--odd {
+    flex-direction: row-reverse;
+  }
+}

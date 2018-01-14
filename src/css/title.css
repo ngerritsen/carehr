@@ -21,3 +21,13 @@
   color: var(--white);
   margin-left: 0.5rem;
 }
+
+.title-link,
+.title-link:visited {
+  color: inherit;
+}
+
+.title-link:focus,
+.title-link:hover {
+  text-decoration: none;
+}

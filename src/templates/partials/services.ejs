@@ -7,21 +7,21 @@
       <% services.forEach((service, index) => { %>
         <div class="service">
           <div class="service__icon">
-            <i class="fas fa-<%= service.icon %>"></i>
+            <i class="far fa-<%= service.icon %>"></i>
           </div>
           <div class="service__content">
             <h3 class="service__title"><%= service.title %></h3>
             <p class="service__intro"><%= service.intro %></p>
           </div>
-          <a class="service__read-more" href="diensten.html#<%= service.id %>">
-            <i class="fas fa-angle-right"></i>&nbsp; Lees meer
+          <a class="icon-with-text" href="diensten.html#<%= service.id %>">
+            <i class="fas fa-angle-right"></i>Lees meer
           </a>
         </div>
       <% }) %>
     </div>
 
     <center>
-      <a href="over-ons.html" class="button">Meer over onze diensten</a>
+      <a href="diensten.html" class="button">Meer over onze diensten</a>
     </center>
   </div>
 </section>

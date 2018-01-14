@@ -7,15 +7,16 @@
      <link rel="icon" href="favicon.png" type="image/x-icon" />
     <title><%= title %></title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rubik" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
     <%- '<style>' + css + '</style>' %>
-    <script src="<%= jsPath %>" async></script>
+    <script src="<%= jsPath %>"></script>
   </head>
   <body>
     <header class="section section--header section--odd">
       <div class="container">
         <div class="title-container">
-          <h1 class="title">Care<span class="title__postfix">HR</span></h1>
+          <a href="index.html" class="title-link">
+            <h1 class="title">Care<span class="title__postfix">HR</span></h1>
+          </a>
           <span class="headline"><%= tagLine %></span>
         </div>
       </div>

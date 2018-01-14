@@ -1,4 +1,5 @@
-.button {
+.button,
+.button:visited {
   display: inline-block;
   margin: 0;
   width: 100%;
@@ -20,7 +21,9 @@
 .button:hover,
 .button:focus {
   cursor: pointer;
+  color: var(--white);
   background-color: var(--secondary-hover);
+  text-decoration: none;
 }
 
 @media screen and (min-width: 620px) {

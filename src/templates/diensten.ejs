@@ -1,3 +1,42 @@
 <%- include('partials/header') %>
-<%- include('partials/services') %>
+
+<section class="section">
+  <div class="container">
+    <%- include('partials/breadcrumb') %>
+    <h2>Diensten</h2>
+    <p class="sub-title">Onze diensten op een rijtje.</p>
+  </div>
+</section>
+
+<% services.forEach((service, index) => { %>
+  <section class="section <%= index % 2 === 0 ? 'section--odd' : '' %>">
+    <div class="container">
+      <div class="info-section <%= index % 2 === 0 ? 'info-section--odd' : '' %>">
+
+        <div class="info-section__illustration">
+          <div class="display-icon">
+            <i class="far fa-<%= service.icon %>"></i>
+          </div>
+        </div>
+
+        <div class="info-section__info">
+          <div class="service__content">
+            <h3><%= service.title %></h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <a class="icon-with-text" href="#contact">
+            <i class="far fa-envelope"></i>Neem contact op
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<% }) %>
+
 <%- include('partials/footer') %>

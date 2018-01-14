@@ -38,6 +38,23 @@ p {
   margin: 0 0 2.4rem;
 }
 
+a,
+a:visited {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
 .intro {
   color: var(--grey);
   margin-bottom: 1.6rem;
@@ -59,14 +76,9 @@ p {
   font-size: 1.9rem;
 }
 
-.icon-with-text {
-  display: flex;
-}
-
 .icon-with-text > *:first-child {
-  position: relative;
-  top: 0.4rem;
-  margin-right: 1.6rem;
+  display: inline-block;
+  margin-right: 0.6em;
 }
 
 .sub-title {

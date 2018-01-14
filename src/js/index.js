@@ -1,4 +1,5 @@
 import initFormValidation from './formValidation';
+import './fontAwesome';
 
 ready(() => {
   initFormValidation();

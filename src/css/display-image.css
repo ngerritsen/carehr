@@ -1,0 +1,14 @@
+.display-image {
+  background-size: cover;
+  border-radius: 99rem;
+  width: 16rem;
+  height: 16rem;
+  margin: 2rem auto;
+}
+
+.display-image--inline {
+  float: right;
+  width: 12rem;
+  height: 12rem;
+  margin: 0 0 1.6rem 1.6rem;
+}

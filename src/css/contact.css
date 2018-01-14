@@ -1,16 +1,6 @@
-.contact-link,
-.contact-link:visited {
-  display: block;
-  opacity: 0.8;
-  color: inherit;
-  text-decoration: none;
+.contact-link {
   margin-bottom: 2.4rem;
   font-size: 1.6rem;
-}
-
-.contact-link:hover,
-.contact-link:focus {
-  opacity: 1;
 }
 
 @media screen and (min-width: 620px) {

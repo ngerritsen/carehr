@@ -1,3 +1,42 @@
 <%- include('partials/header') %>
-<%- include('partials/about') %>
+
+<section class="section">
+  <div class="container">
+    <%- include('partials/breadcrumb') %>
+    <h2>Over ons</h2>
+    <p class="sub-title">Wie zijn wij?</p>
+  </div>
+</section>
+
+<% profiles.forEach((profile, index) => { %>
+  <section class="section <%= index % 2 === 0 ? 'section--odd' : '' %>">
+    <div class="container">
+      <div class="info-section <%= index % 2 === 0 ? 'info-section--odd' : '' %>">
+
+        <div class="info-section__illustration">
+          <figure class="display-image is-visible-from-desktop" style="background-image: url(img/<%= profile.image %>)">
+          </figure>
+        </div>
+
+        <div class="info-section__info">
+          <figure class="display-image display-image--inline is-hidden-from-desktop" style="background-image: url(img/<%= profile.image %>)">
+          </figure>
+          <h3><%= profile.name %></h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <a class="icon-with-text" target="_blank" href="<%= profile.linkedin %>">
+            <i class="fab fa-linkedin"></i>LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+<% }) %>
+
 <%- include('partials/footer') %>
