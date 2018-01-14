@@ -1,0 +1,40 @@
+.companies {
+  margin: 4rem -1.6rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.company {
+  width: 100%;
+  text-align: center;
+  filter: grayscale();
+  transition: filter 0.2s ease;
+  opacity: 0.85;
+  margin: 1.6rem;
+}
+
+.company:hover,
+.company:focus {
+  filter: none;
+}
+
+.company__image {
+  max-width: 14rem;
+  max-height: 6rem;
+  width: auto;
+  height: auto;
+}
+
+@media screen and (min-width: 620px) {
+  .companies {
+    border-top: 1px solid var(--border);
+    padding-top: 1.6rem;
+  }
+
+  .company {
+    width: auto;
+    margin: 2.4rem;
+  }
+}

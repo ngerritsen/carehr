@@ -7,21 +7,27 @@ module.exports = {
   tagLine,
   profiles: [
     {
+      id: 'carlo-reeser',
       name: 'Carlo Reeser',
       image: 'carlo.jpg',
-      intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      intro: 'Carlo heeft jarenlange ervaring opgebouwd als HR-manager van Sophia Revalidatie. Sinds 4 jaar werkzaam als freelancer adviseur. Werkt als voorzitter van diverse commissies op gebied van uitvoering sociale plannen en functiewaardering o.a. voor de Haagse ziekenhuizen.',
+      description: 'Carlo heeft jarenlange ervaring opgebouwd als HR-manager van Sophia Revalidatie. Sinds 4 jaar werkzaam als freelancer adviseur. Werkt als voorzitter van diverse commissies op gebied van uitvoering sociale plannen (Argos Zorggroep) en functiewaardering o.a. voor de Haagse ziekenhuizen (Haga MCH LangeLand ZKH, GHZ). Bij Labwest en Schroeder van der Kolk heeft hij projecten gedaan op het gebied van duurzame inzetbaarheid en het in beeld brengen van de management structuur.',
       linkedin: 'https://www.linkedin.com/in/carlo-reeser-85b6338/'
     },
     {
+      id: 'rene-dessing',
       name: 'René Dessing',
       image: 'rene.jpg',
-      intro: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+      intro: 'René heeft in zijn carrière accent gelegd op begeleiding van reorganisaties en het stimuleren van mobiliteit. Hier heeft hij ervaring opgebouwd in het opstellen van sociale plannen.',
+      description: 'René heeft in zijn carrière accent gelegd op begeleiding van reorganisaties en het stimuleren van mobiliteit. Hier heeft hij ervaring opgebouwd in het opstellen van sociale plannen. Als adviseur organisatie en efficiency heeft hij bij het productschap Akkerbouw de interne organisatie doorgelicht op werkprocessen en leiderschap. Hij heeft zich ontwikkeld als coach en expert op het gebeid van managementdrives. Daarmee hielp hij veel medewerkers zich verder ontwikkelen, vaak ook in een andere functie.',
       linkedin: 'https://www.linkedin.com/in/ren%C3%A9-dessing-b525213/'
     },
     {
+      id: 'fred-spiering',
       name: 'Fred Spiering',
       image: 'fred.jpg',
-      intro: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.',
+      intro: 'Opgeleid als bedrijfseconoom heeft Fred veel ervaring met directiefuncties in P&O en lijnmanagement bij zorginstellingen. Ook als toezichthouder bij maatschappelijke organisaties',
+      description: 'Opgeleid als bedrijfseconoom bekleedde Fred in algemene ziekenhuizen en GGZ instellingen ruim vijfentwintig jaar directiefuncties in P&O en lijnmanagement. Vervolgens was hij lange tijd werkzaam voor de ouderenzorg. Door die loopbaan voelt hij zich één met de zorgsector en de mensen die erin werkzaam zijn. Fred beschikt daarbij over een uitgebreide ervaring met het professionaliseren en herinrichten van HR afdelingen en het optimaliseren van HR processen en het gebruik van HR-systemen. Hij is van binnenuit vertrouwd met de omslag die in de gezondheidszorg nodig is om de overgang naar vrije marktwerking succesvol te doorstaan. Daarnaast heeft Fred ervaring als toezichthouder/commissaris bij maatschappelijke organisaties.',
       linkedin: 'https://www.linkedin.com/in/frederik-fred-spiering-520b3a6/'
     }
   ],
@@ -49,6 +55,58 @@ module.exports = {
       title: 'Interim HR opdrachten',
       icon: 'medkit',
       intro: 'De bestaande werkzaamheden blijven uitvoeren, een verbeterplan implementeren en ondertussen op zoek naar een oplossing voor de toekomst.'
+    }
+  ],
+  companies: [
+    {
+      image: 'argos',
+      name: 'Argos Zorggroep',
+      url: 'https://www.argoszorggroep.nl/'
+    },
+    {
+      image: 'cato',
+      name: 'Cato WWZ',
+      url: 'https://www.cato-wwz.nl/wwz/zorg'
+    },
+    {
+      image: 'groene-hart',
+      name: 'Groene Hart Ziekenhuis',
+      url: 'https://www.ghz.nl/'
+    },
+    {
+      image: 'hmc',
+      name: 'HMC Haaglanden Medisch Centrum',
+      url: 'https://www.haaglandenmc.nl/'
+    },
+    {
+      image: 'labwest',
+      name: 'LabWest',
+      url: 'https://www.lab-west.nl/'
+    },
+    {
+      image: 'langeland',
+      name: 'LangeLand Ziekenhuis',
+      url: 'https://www.langeland.nl/'
+    },
+    {
+      image: 'rijndam',
+      name: 'Rijndam Revalidatie',
+      url: 'https://www.rijndam.nl/'
+    },
+    {
+      image: 'rszk',
+      name: 'RSZK ZorgProfessionals',
+      url: 'http://www.rszk.nl/'
+    },
+    {
+      image: 'salux',
+      name: 'Salux Healthcare',
+      url: 'http://www.salux.nl/'
+    },
+    {
+      image: 'schroeder',
+      name: 'Kringloop Holland Schroeder van der Kolk',
+      url: 'http://www.schroeder.nl/'
     }
   ]
 }

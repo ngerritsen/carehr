@@ -23,5 +23,13 @@
     <center>
       <a href="diensten.html" class="button">Meer over onze diensten</a>
     </center>
+
+    <div class="companies">
+      <% companies.forEach((company) => { %>
+        <a href="<%= company.url %>" class="company" target="_blank">
+          <img class="company__image" src="img/<%= company.image %>.png" alt="<%= company.name %>">
+        </a>
+      <% }) %>
+    </div>
   </div>
 </section>

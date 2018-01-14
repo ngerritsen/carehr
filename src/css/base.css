@@ -76,6 +76,11 @@ a:hover {
   font-size: 1.9rem;
 }
 
+.show-more-in-line {
+  margin-top: 0.8rem;
+  display: block;
+}
+
 .icon-with-text > *:first-child {
   display: inline-block;
   margin-right: 0.6em;
