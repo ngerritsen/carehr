@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - "8"
-scripts:
+script:
   - npm run build
 after_success:
-  - curl -3 -T index.html ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/v2 \;
-  - curl -3 -T bundle.js ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/v2 \;
-  - curl -3 -T favicon.png ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/v2 \;
+  - curl -3 -T index.html ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/v2/ \;
+  - curl -3 -T bundle.js ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/v2/ \;
+  - curl -3 -T favicon.png ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/v2/ \;
   - find img -type f -exec curl -3 --ftp-create-dirs -T {} ftp://$FTP_USER:$FTP_PASSWORD@ftp.carehr.nl/public_html/v2/img/ \;
