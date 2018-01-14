@@ -3,10 +3,11 @@
   --secondary: #17519e;
   --secondary-hover: #13488e;
   --white: #fff;
-  --background: #fdfdfd;
+  --background: #fafafa;
   --foreground: #222;
-  --shadow: #aaa;
-  --grey: #626872;
+  --border: #ddd;
+  --shadow: #bbb;
+  --grey: #5f636b;
   --lightGrey: #eee;
 
   --titleFont: 'Rubik', Helvetica, Arial, sans-serif;

@@ -2,36 +2,85 @@
 
 const fs = require('fs');
 const path = require('path');
+const webpack = require('webpack');
 const postcss = require('postcss');
+const cssNext = require('postcss-cssnext');
 const atImport = require("postcss-import")
 const cssnano = require('cssnano');
 const ejs = require('ejs');
+
+const webpackConfig = require('./webpack.config.js');
 
 const templatePath = 'src/templates/index.ejs';
 const htmlFileOutputPath = 'index.html';
 const cssFileInputPath = 'src/css/style.css';
 
-const production = process.env.NODE_ENV === 'production';
+const cache = new Map();
+const env = process.env.NODE_ENV || 'development';
+const time = new Date().toISOString();
+
+console.log(`🚀 Starting ${env} build... [${time}]\n`);
 
 run();
 
 async function run() {
-  let css = await readFile(cssFileInputPath);
-
-  css = await postcss([cssnano])
-    .use(atImport())
-    .process(css, { from: cssFileInputPath });
-
+  const results = await buildJs(webpackConfig);
+  const css = await buildCss(cssFileInputPath);
   const html = await renderTemplate(templatePath, {
     ...require('./data'),
-    css
+    css,
+    jsPath: `bundle.js?q=${results.hash}`
   });
 
   await writeFile(path.join(htmlFileOutputPath), html);
 
   const size = Buffer.byteLength(html, 'utf8')
 
-  console.log(`Wrote output to ${htmlFileOutputPath} (${size / 1000} kB)`);
+  console.log(`\nWrote HTML to ${htmlFileOutputPath} (${size / 1000} kB)\n`);
+}
+
+async function buildJs(config) {
+  return new Promise((resolve, reject) => {
+    const compiler = cache.get('compiler') || webpack(config);
+
+    cache.set('compiler', compiler);
+    compiler.run((err, stats) => {
+      if (err) {
+        console.error(err.stack || err);
+
+        if (err.details) {
+          console.error(err.details);
+        }
+
+        reject(err);
+        return;
+      }
+
+      console.log(stats.toString({ colors: true, chunks: false }));
+
+      resolve(stats);
+    });
+  })
+}
+
+async function buildCss(inputFilePath) {
+  const css = await readFile(inputFilePath);
+  const postcssPlugins = [
+    atImport(),
+    cssNext({
+      warnForDuplicates: false,
+      features: {
+        rem: false
+      }
+    })
+  ];
+
+  if (env === 'production') {
+    postcssPlugins.push(cssnano());
+  }
+
+  return await postcss(postcssPlugins)
+    .process(css, { from: inputFilePath });
 }
 
 function renderTemplate(filePath, data) {

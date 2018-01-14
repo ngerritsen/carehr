@@ -13,7 +13,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        use: ['babel-loader']
       }
     ]
   }
@@ -21,10 +21,7 @@ const config = {
 
 if (process.env.NODE_ENV === 'production') {
   delete config.devtool;
-
-  config.plugins = [
-    new webpack.optimize.UglifyJsPlugin()
-  ];
+  config.plugins = [new webpack.optimize.UglifyJsPlugin()];
 }
 
 module.exports = config;

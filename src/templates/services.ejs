@@ -1,12 +1,23 @@
-<section class="section">
+<section class="section section--odd">
   <div class="container">
     <h2>Diensten</h2>
-    <p class="sub-title">Professioneel HR advies in de zorg.</p>
+    <p class="sub-title"><%= tagLine %></p>
 
-    <% services.forEach((service) => { %>
-      <h3><%= service.title %></h3>
-      <p><strong><%= service.intro %></strong></p>
-      <p><%= service.content %></p>
-    <% }) %>
+    <div class="services">
+      <% services.forEach((service, index) => { %>
+        <div class="service">
+          <div class="service__icon">
+            <i class="fas fa-<%= service.icon %>"></i>
+          </div>
+          <div class="service__content">
+            <h3 class="service__title"><%= service.title %></h3>
+            <p class="service__intro"><%= service.intro %></p>
+          </div>
+          <a class="service__read-more" href="#">
+            <i class="fas fa-angle-right"></i>&nbsp; Lees meer
+          </a>
+        </div>
+      <% }) %>
+    <div>
   </div>
 </section>
