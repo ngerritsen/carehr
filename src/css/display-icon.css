@@ -1,7 +1,7 @@
 .display-icon {
-  font-size: 3.4rem;
+  font-size: 4rem;
   color: var(--secondary);
-  margin: 0 0 2.4rem;
+  margin: 0 0 1.6rem;
   padding-bottom: 1.6rem;
   border-bottom: 1px solid var(--border);
 }

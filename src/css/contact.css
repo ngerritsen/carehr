@@ -1,6 +1,11 @@
 .contact-link {
-  margin-bottom: 2.4rem;
+  display: block;
+  margin-bottom: 1.6rem;
   font-size: 1.6rem;
+}
+
+.contact-link:last-child {
+  margin-bottom: 2.4rem;
 }
 
 @media screen and (min-width: 620px) {
