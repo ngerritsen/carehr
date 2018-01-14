@@ -1,7 +1,14 @@
+.profiles {
+  margin: 1.6rem 0;
+}
+
 .profile {
+  position: relative;
   border-radius: 0.4rem;
   box-shadow: 0 3px 14px var(--shadow);
   margin-bottom: 1.6rem;
+  padding-bottom: 2.4rem;
+  background-color: var(--white);
 }
 
 .profile__image {
@@ -14,22 +21,29 @@
   border-radius: 0.4rem 0.4rem 0 0;
 }
 
-.profile__name,
-.profile__name:visited {
-  display: block;
-  opacity: 0.8;
-  background-color: white;
-  text-align: center;
+.profile__info {
   padding: 1.6rem;
-  color: #17519e;
+  position: relative;
+}
+
+.profile__linkedin,
+.profile__linkedin:visited {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  padding: 1.6rem 1.6rem 2.4rem;
+  color: var(--primary);
   text-decoration: none;
+  width: 100%;
+  text-align: center;
   border-radius: 0.4rem;
 }
 
-.profile__name:hover,
-.profile__name:focus {
+.profile__linkedin:hover,
+.profile__linkedin:focus {
   cursor: pointer;
-  opacity: 1;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 620px) {

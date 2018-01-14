@@ -13,11 +13,15 @@
             <h3 class="service__title"><%= service.title %></h3>
             <p class="service__intro"><%= service.intro %></p>
           </div>
-          <a class="service__read-more" href="#">
+          <a class="service__read-more" href="diensten.html#<%= service.id %>">
             <i class="fas fa-angle-right"></i>&nbsp; Lees meer
           </a>
         </div>
       <% }) %>
-    <div>
+    </div>
+
+    <center>
+      <a href="over-ons.html" class="button">Meer over onze diensten</a>
+    </center>
   </div>
 </section>

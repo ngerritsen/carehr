@@ -2,17 +2,6 @@
   margin-bottom: 4.8rem;
 }
 
-.service__title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1.6rem;
-}
-
-.service__intro {
-  margin-bottom: 1.6rem;
-  color: var(--grey);
-}
-
 .service__icon {
   color: var(--primary);
   margin-bottom: 1.6rem;

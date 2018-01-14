@@ -11,8 +11,9 @@ const ejs = require('ejs');
 
 const webpackConfig = require('./webpack.config.js');
 
-const templatePath = 'src/templates/index.ejs';
-const htmlFileOutputPath = 'index.html';
+const templates = ['index', 'diensten', 'over-ons'];
+const templateDir = 'src/templates';
+const htmlOutputDir = './';
 const cssFileInputPath = 'src/css/style.css';
 
 const cache = new Map();
@@ -24,19 +25,25 @@ console.log(`🚀 Starting ${env} build... [${time}]\n`);
 run();
 
 async function run() {
+  const startTime = Date.now();
   const results = await buildJs(webpackConfig);
   const css = await buildCss(cssFileInputPath);
-  const html = await renderTemplate(templatePath, {
-    ...require('./data'),
-    css,
-    jsPath: `bundle.js?q=${results.hash}`
-  });
 
-  await writeFile(path.join(htmlFileOutputPath), html);
+  for (const template of templates) {
+    const html = await renderTemplate(path.join(templateDir, template + '.ejs'), {
+      ...require('./data'),
+      css,
+      jsPath: `bundle.js?q=${results.hash}`
+    });
 
-  const size = Buffer.byteLength(html, 'utf8')
+    await writeFile(path.join(htmlOutputDir, template + '.html'), html);
 
-  console.log(`\nWrote HTML to ${htmlFileOutputPath} (${size / 1000} kB)\n`);
+    const size = Buffer.byteLength(html, 'utf8')
+
+    console.log(`Wrote HTML to ${template}.html (${size / 1000} kB)`);
+  }
+
+  console.log(`\n✅ Finished build in ${(Date.now() - startTime) / 1000}s\n`);
 }
 
 async function buildJs(config) {

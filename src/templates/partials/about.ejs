@@ -13,11 +13,19 @@
       <% profiles.forEach((profile) => { %>
         <div class="profile">
           <figure class="profile__image" style="background-image: url(img/<%= profile.image %>)"></figure>
-          <a class="profile__name" target="_blank" href="<%= profile.linkedin %>">
-            <i class="fab fa-linkedin"></i> &nbsp; <%= profile.name %>
+          <div class="profile__info">
+            <h3><%= profile.name %></h3>
+            <p><%= profile.intro %></p>
+          </div>
+          <a class="profile__linkedin" target="_blank" href="<%= profile.linkedin %>">
+            <i class="fab fa-linkedin"></i> &nbsp; LinkedIn
           </a>
         </div>
       <% }) %>
     </div>
+
+    <center>
+      <a href="over-ons.html" class="button">Meer over ons</a>
+    </center>
   </div>
 </section>
