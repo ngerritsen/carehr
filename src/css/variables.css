@@ -1,12 +1,13 @@
 :root {
   --primary: #3a8efc;
   --secondary: #17519e;
+  --green: #2be258;
   --secondary-hover: #13488e;
   --white: #fff;
   --background: #f4f4f4;
   --foreground: #222;
   --border: #ddd;
-  --shadow: #bbb;
+  --shadow: rgba(0, 0, 0, 0.3);
   --grey: #5f636b;
   --lightGrey: #dedede;
 

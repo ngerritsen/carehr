@@ -1,0 +1,49 @@
+@keyframes show-notification {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.notification {
+  padding: 1.6rem 0;
+  color: var(--white);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  transform: translateY(0);
+  box-shadow: 0 1px 10px var(--shadow);
+
+  animation: 0.4s ease show-notification;
+}
+
+.notification__success {
+  background-color: var(--green);
+}
+
+.notification__content {
+  font-weight: bold;
+  display: flex;
+}
+
+.notification__message {
+  flex-grow: 1;
+}
+
+.notification__icon {
+  font-size: 1.7rem;
+  display: flex;
+  padding: 0 0.8rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notification__icon:focus,
+.notification__icon:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}

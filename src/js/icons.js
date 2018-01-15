@@ -12,6 +12,7 @@ export default function initIcons() {
     require('@fortawesome/fontawesome-pro-regular/faMedkit'),
     require('@fortawesome/fontawesome-pro-regular/faMobile'),
     require('@fortawesome/fontawesome-pro-solid/faQuoteRight'),
+    require('@fortawesome/fontawesome-pro-solid/faTimesCircle'),
     require('@fortawesome/fontawesome-pro-regular/faUsers')
   ]
 
