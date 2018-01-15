@@ -1,19 +1,9 @@
-import initFormValidation from './formValidation';
-import './fontAwesome';
+import initContactForm from './contactForm';
+import initIcons from './icons';
+import ready from './ready';
+
+initIcons();
 
 ready(() => {
-  initFormValidation();
+  initContactForm();
 });
-
-function ready(fn) {
-  if (
-    document.attachEvent
-      ? document.readyState === 'complete'
-      : document.readyState !== 'loading'
-  ) {
-    fn();
-    return;
-  }
-
-  document.addEventListener('DOMContentLoaded', fn);
-}

@@ -1,25 +1,12 @@
-export default function initFormValidation() {
-  const form = document.querySelector('[data-form-validation]');
-  const formSections = [...document.querySelectorAll('[data-form-section]')];
-
-  form.addEventListener('submit', (event) => {
-    const errors = validateForm(formSections);
-
-    if (errors) {
-      event.preventDefault();
-    }
-  })
-}
-
-function validateForm(formSections) {
-  const name = getFormInput(formSections, 'name');
-  const email = getFormInput(formSections, 'email');
-  const subject = getFormInput(formSections, 'subject');
-  const message = getFormInput(formSections, 'message');
-
+export default function validateForm(formValues) {
+  const { name, email, subject, message, gotcha } = formValues;
   let errors = false;
 
-  formSections.forEach(unsetError);
+  formSections.forEach(({ container }) => unsetError(container));
+
+  if (gotcha.value) {
+    errors = true;
+  }
 
   if (name.value.trim().length < 3) {
     setError(name.container, 'Vul een naam in van minimaal 3 karakters in.');
@@ -74,14 +61,4 @@ function createErrorEl(message) {
 
 function isValidEmail(value) {
   return !!value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/);
-}
-
-function getFormInput(formSections, name) {
-  const el = formSections.find(el => el.getAttribute('data-form-section') === name);
-  const field = el.querySelector('input') || el.querySelector('textarea');
-
-  return {
-    container: el,
-    value: field.value
-  }
 }
