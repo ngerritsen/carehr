@@ -11,7 +11,7 @@
         <i class="far fa-fw fa-mobile"></i>(06) 42 46 84 84
       </a>
     </div>
-      <form action="https://mailthis.to/carehr" method="POST" data-form-validation>
+      <form action="https://formspree.io/info@carehr.nl" method="POST" data-form-validation>
         <div class="form-inline">
           <div class="form-section" data-form-section="name">
             <label for="name">Naam*</label>
@@ -24,7 +24,7 @@
         </div>
         <div class="form-section" data-form-section="subject">
           <label for="subject">Onderwerp*</label>
-          <input type="text" id="subject">
+          <input type="text" id="subject" name="_subject">
         </div>
         <div class="form-section" data-form-section="message">
           <label for="message">Bericht*</label>
@@ -33,6 +33,8 @@
         <button type="submit" class="button button--full-width">
           Versturen
         </button>
+        <input type="hidden" name="_language" value="nl">
+        <input type="hidden" name="_next" value="<%= url %>/#contact?success=true">
       </form>
   </div>
 </section>

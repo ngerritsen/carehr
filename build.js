@@ -20,6 +20,10 @@ const cache = new Map();
 const env = process.env.NODE_ENV || 'development';
 const time = new Date().toISOString();
 
+const baseUrl = env === 'production'
+  ? 'https://carehr.nl/v2'
+  : 'http://localhost:8080';
+
 console.log(`🚀 Starting ${env} build... [${time}]\n`);
 
 run();
@@ -33,6 +37,8 @@ async function run() {
     const html = await renderTemplate(path.join(templateDir, template + '.ejs'), {
       ...require('./data'),
       css,
+      baseUrl,
+      url: baseUrl + (template === 'index' ? '' : ('/' + template + '.html')),
       jsPath: `bundle.js?q=${results.hash}`
     });
 

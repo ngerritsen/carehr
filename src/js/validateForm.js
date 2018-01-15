@@ -1,34 +1,32 @@
 export default function validateForm(formValues) {
   const { name, email, subject, message, gotcha } = formValues;
-  let errors = false;
+  let valid = true;
 
-  formSections.forEach(({ container }) => unsetError(container));
-
-  if (gotcha.value) {
-    errors = true;
-  }
+  Object.keys(formValues)
+    .map(key => formValues[key].container)
+    .forEach(unsetError);
 
   if (name.value.trim().length < 3) {
     setError(name.container, 'Vul een naam in van minimaal 3 karakters in.');
-    errors = true;
+    valid = false;
   }
 
   if (!isValidEmail(email.value)) {
     setError(email.container, 'Vul een geldig email adres in.');
-    errors = true;
+    valid = false;
   }
 
   if (subject.value.trim().length < 3) {
     setError(subject.container, 'Vul een onderwerp van minimaal 3 karakters in.');
-    errors = true;
+    valid = false;
   }
 
   if (message.value.trim().length < 21) {
     setError(message.container, 'Vul een bericht van minimaal 21 karakters in.');
-    errors = true;
+    valid = false;
   }
 
-  return errors;
+  return valid;
 }
 
 function unsetError(container) {
