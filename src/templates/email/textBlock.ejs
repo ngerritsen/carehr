@@ -1,0 +1,15 @@
+<% const fgColor = typeof color === 'undefined' ? colors.foreground : color %>
+<% const paddingBot = typeof paddingBottom === 'undefined' ? '24px' : paddingBottom %>
+<% const fntSize = typeof fontSize === 'undefined' ? fontSizes.main : fontSize %>
+<% const fontFamily = typeof font === 'undefined' ? fonts.main : font %>
+<% const boldFont = typeof bold === 'undefined' ? false : bold %>
+
+<tr>
+  <td style="padding-bottom: <%= paddingBot %>; font-family: <%= fontFamily %>; color: <%= fgColor %>; font-size: <%= fntSize %>;">
+    <% if (boldFont) { %>
+      <b><%= text %></b>
+    <% } else { %>
+      <%= text %>
+    <% } %>
+  </td>
+</tr>

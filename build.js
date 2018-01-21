@@ -11,7 +11,7 @@ const ejs = require('ejs');
 
 const webpackConfig = require('./webpack.config.js');
 
-const templates = ['index', 'diensten', 'over-ons'];
+const templates = ['index', 'diensten', 'over-ons', 'email'];
 const templateDir = 'src/templates';
 const htmlOutputDir = './';
 const cssFileInputPath = 'src/css/style.css';
@@ -36,6 +36,7 @@ async function run() {
   for (const template of templates) {
     const html = await renderTemplate(path.join(templateDir, template + '.ejs'), {
       ...require('./data/content'),
+      ...require('./data/variables'),
       css,
       baseUrl,
       url: baseUrl + (template === 'index' ? '' : ('/' + template + '.html')),

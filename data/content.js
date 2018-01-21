@@ -31,6 +31,11 @@ module.exports = {
       linkedin: 'https://www.linkedin.com/in/frederik-fred-spiering-520b3a6/'
     }
   ],
+  hrCheckQuestions: [
+    'Wat verwachten klanten van HR?',
+    'Hoe tevreden zijn de klanten over HR?',
+    'Wat kan beter, anders en wat blijft er liggen?'
+  ],
   services: [
     {
       id: 'advies-ondersteuning',

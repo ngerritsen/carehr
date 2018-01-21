@@ -1,0 +1,18 @@
+<% const iconName = typeof icon === 'undefined' ? 'arrow' : icon %>
+<% const iconSizePx = typeof iconSize === 'undefined' ? '10px' : iconSize %>
+<tr>
+  <td style="padding-bottom: 12px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td style="width: <%= iconSizePx %>; padding-right: 8px;">
+          <img width="<%= iconSizePx %>" height="<%= iconSizePx %>" src="<%= baseUrl %>/img/<%= iconName %>.png" alt="" style="display: block;"/>
+        </td>
+        <td>
+          <a href="<%= href %>" target="_blank" style="font-family: <%= fonts.main %>; font-size: <%= fontSizes.main %>; color: <%= colors.primary %>; text-decoration: none;">
+            <%= text %>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
