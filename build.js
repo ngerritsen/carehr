@@ -35,7 +35,7 @@ async function run() {
 
   for (const template of templates) {
     const html = await renderTemplate(path.join(templateDir, template + '.ejs'), {
-      ...require('./data'),
+      ...require('./data/content'),
       css,
       baseUrl,
       url: baseUrl + (template === 'index' ? '' : ('/' + template + '.html')),

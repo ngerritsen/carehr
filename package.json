@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production node build",
-    "watch": "node build; concurrently \"http-server\" \"watch-run -p './src/**/*,./data.js' node build\""
+    "watch": "node build; concurrently \"http-server\" \"watch-run -p './src/**/*,./data/*.js' node build\""
   },
   "repository": {
     "type": "git",

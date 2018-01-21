@@ -1,5 +1,3 @@
 node_modules
-diensten.html
-over-ons.html
-index.html
+*.html
 bundle.js
