@@ -1,9 +1,9 @@
 .section {
-  padding: 6.4rem 0;
+  padding: 4.8rem 0;
 }
 
 .section--header {
-  padding: 4.8rem 0;
+  padding: 3.2rem 0;
 }
 
 .section--primary {
@@ -17,4 +17,15 @@
 
 .section--odd {
   background-color: var(--white);
+}
+
+
+@media screen and (min-width: 620px) {
+  .section {
+    padding: 6.4rem 0;
+  }
+
+  .section--header {
+    padding: 4.8rem 0;
+  }
 }
