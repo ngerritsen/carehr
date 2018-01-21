@@ -1,126 +1,88 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <%- include('email/head') %>
+<%- include('email/header') %>
 
-  <%- include('email/rowStart', { verticalPadding: '24px' }) %>
-    <a target="_blank" href="<%= baseUrl %>">
-      <img width="146" height="67" src="<%= baseUrl %>/img/logo.png" alt="CareHR" style="display: block;"/>
-    </a>
-  <%- include('email/rowEnd') %>
+<%- include('email/rowStart', { backgroundColor: colors.primary }) %>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <%- include('email/textRow', {
+      text: 'HR Check in de Zorg',
+      color: colors.white,
+      font: fonts.heading,
+      fontSize: fontSizes.title
+    }) %>
 
-  <%- include('email/rowStart', { backgroundColor: colors.primary }) %>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <%- include('email/textBlock', {
-        text: 'HR Check in de Zorg',
-        color: colors.white,
-        font: fonts.heading,
-        fontSize: fontSizes.title
-      }) %>
-
-      <%- include('email/textBlock', {
-        text: 'Een quickscan analyse van het functioneren en de beleving van HR in uw organisatie.',
-        color: colors.leaderboardForeground,
-        font: fonts.heading,
-        fontSize: fontSizes.quote
-      }) %>
-    </table>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <% hrCheckQuestions.forEach((question) => { %>
-        <tr>
-          <td style="color: <%= colors.leaderboardForeground %>; font-family: <%= fonts.main %>; font-size: <%= fontSizes.main %>; width: 14px; padding: 0 8px 16px 0">
-            <img width="14px" height="14px" src="<% baseUrl %>/img/check-circle-leaderboard.png" alt="" style="display: block;"/>
-          </td>
-          <td style="color: <%= colors.leaderboardForeground %>; font-family: <%= fonts.main %>; font-size: <%= fontSizes.main %>; padding-bottom: 16px;">
-            <%= question %>
-          </td>
-        </tr>
-      <% }) %>
-    </table>
-  <%- include('email/rowEnd') %>
-
-  <%- include('email/rowStart') %>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <%- include('email/textBlock', {
-        text: 'Weet hoe er over HR wordt gedacht!',
-        font: fonts.heading,
-        fontSize: fontSizes.heading
-      }) %>
-
-      <%- include('email/textBlock', {
-        text: 'Heeft u het idee dat het beter kan op het gebied van HR in uw organisatie, of wilt u gewoon weten hoe er over HR wordt gedacht?',
-        bold: true
-      }) %>
-
-      <%- include('email/textBlock', {
-        text: 'Het is vaak lastig een vinger te leggen op wat er moet veranderen of verbeteren. Daarnaast is er binnen zorgorganisaties veel gaande. Er is bezuinigd, klantbenadering staat centraal en organisaties zijn aangepast waarbij HR taken mogelijk lager in de organisatie zijn komen te liggen. De beleidsfunctie en social control bleven veelal centraal. Maar hoe functioneert dat?',
-      }) %>
-
-      <%- include('email/textBlock', {
-        text: 'Heeft u het idee dat het beter kan op het gebied van HR in uw organisatie, of wilt u gewoon weten hoe er over HR wordt gedacht?'
-      }) %>
-
-      <%- include('email/textBlock', {
-        text: 'Heeft de verzakelijk in de zorgsector ongewenste effecten op de beleving in de zorgsector en is het noodzakelijk die bij te sturen zeker nu ook de arbeidsmarkt verkrapt?'
-      }) %>
-
-      <%- include('email/textBlock', {
-        text: 'CareHR kan met behulp van een quickscan een analyse maken van het functioneren en beleving van HR in uw organisatie.'
-      }) %>
-
-      <%- include('email/link', {
-        href: baseUrl + '/diensten.html#hr-check',
-        text: 'Lees meer over de HR Check'
-      }) %>
-    </table>
-  <%- include('email/rowEnd') %>
-
-  <%- include('email/rowStart', { backgroundColor: colors.background }) %>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <%- include('email/textBlock', {
-        text: 'Wie zijn wij?',
-        font: fonts.heading,
-        fontSize: fontSizes.heading
-      }) %>
-
-      <%- include('email/textBlock', {
-        text: 'CareHR geeft professioneel advies in de zorg & onderwijs. Onze consultants hebben veel ervaring in management en directie functies in deze sectoren.'
-      }) %>
-
-      <%- include('email/link', {
-        text: 'Lees meer over ons',
-        href: baseUrl + '/over-ons.html'
-      }) %>
-    </table>
-  <%- include('email/rowEnd') %>
-
-  <%- include('email/rowStart') %>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <%- include('email/textRow', {
+      text: 'Een quickscan analyse van het functioneren en de beleving van HR in uw organisatie.',
+      color: colors.leaderboardForeground,
+      font: fonts.heading,
+      fontSize: fontSizes.quote
+    }) %>
+  </table>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <% hrCheckQuestions.forEach((question) => { %>
       <tr>
-        <td style="padding-bottom: 4px;">
-          <a target="_blank" href="<%= baseUrl %>">
-            <img width="110" height="52" src="<%= baseUrl %>/img/logo.png" alt="CareHR" style="display: block;"/>
-          </a>
+        <td style="color: <%= colors.leaderboardForeground %>; font-family: <%= fonts.main %>; font-size: <%= fontSizes.main %>; width: 14px; padding: 0 8px 16px 0">
+          <img width="14px" height="14px" src="<% baseUrl %>/img/check-circle-leaderboard.png" alt="" style="display: block;"/>
         </td>
-      <tr>
-      <%- include('email/textBlock', {
-        text: tagLine,
-        color: colors.grey
-      }) %>
+        <td style="color: <%= colors.leaderboardForeground %>; font-family: <%= fonts.main %>; font-size: <%= fontSizes.main %>; padding-bottom: 16px;">
+          <%= question %>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+<%- include('email/rowEnd') %>
 
-      <%- include('email/link', {
-        text: 'info@carehr.nl',
-        href: 'mailto:info@carehr.nl',
-        icon: 'envelope',
-        iconSize: '15px'
-      }) %>
+<%- include('email/rowStart') %>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <%- include('email/textRow', {
+      text: 'Weet hoe er over HR wordt gedacht!',
+      font: fonts.heading,
+      fontSize: fontSizes.heading
+    }) %>
 
-      <%- include('email/link', {
-        text: '(06) 42 46 84 84',
-        href: 'tel:+31642468484',
-        icon: 'mobile',
-        iconSize: '15px'
-      }) %>
-    </table>
-  <%- include('email/rowEnd') %>
-</body>
-</html>
+    <%- include('email/textRow', {
+      text: 'Heeft u het idee dat het beter kan op het gebied van HR in uw organisatie, of wilt u gewoon weten hoe er over HR wordt gedacht?',
+      bold: true
+    }) %>
+
+    <%- include('email/textRow', {
+      text: 'Het is vaak lastig een vinger te leggen op wat er moet veranderen of verbeteren. Daarnaast is er binnen zorgorganisaties veel gaande. Er is bezuinigd, klantbenadering staat centraal en organisaties zijn aangepast waarbij HR taken mogelijk lager in de organisatie zijn komen te liggen. De beleidsfunctie en social control bleven veelal centraal. Maar hoe functioneert dat?',
+    }) %>
+
+    <%- include('email/textRow', {
+      text: 'Heeft u het idee dat het beter kan op het gebied van HR in uw organisatie, of wilt u gewoon weten hoe er over HR wordt gedacht?'
+    }) %>
+
+    <%- include('email/textRow', {
+      text: 'Heeft de verzakelijk in de zorgsector ongewenste effecten op de beleving in de zorgsector en is het noodzakelijk die bij te sturen zeker nu ook de arbeidsmarkt verkrapt?'
+    }) %>
+
+    <%- include('email/textRow', {
+      text: 'CareHR kan met behulp van een quickscan een analyse maken van het functioneren en beleving van HR in uw organisatie.'
+    }) %>
+
+    <%- include('email/linkRow', {
+      href: baseUrl + '/diensten.html#hr-check',
+      text: 'Lees meer over de HR Check'
+    }) %>
+  </table>
+<%- include('email/rowEnd') %>
+
+<%- include('email/rowStart', { backgroundColor: colors.background }) %>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <%- include('email/textRow', {
+      text: 'Wie zijn wij?',
+      font: fonts.heading,
+      fontSize: fontSizes.heading
+    }) %>
+
+    <%- include('email/textRow', {
+      text: 'CareHR geeft professioneel advies in de zorg & onderwijs. Onze consultants hebben veel ervaring in management en directie functies in deze sectoren.'
+    }) %>
+
+    <%- include('email/linkRow', {
+      text: 'Lees meer over ons',
+      href: baseUrl + '/over-ons.html'
+    }) %>
+  </table>
+<%- include('email/rowEnd') %>
+
+<%- include('email/footer') %>

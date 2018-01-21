@@ -1,0 +1,31 @@
+<%- include('rowStart') %>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td style="padding-bottom: 4px;">
+        <a target="_blank" href="<%= baseUrl %>">
+          <img width="110" height="51" src="<%= baseUrl %>/img/logo.png" alt="CareHR" style="display: block;"/>
+        </a>
+      </td>
+    <tr>
+    <%- include('textRow', {
+      text: tagLine,
+      color: colors.grey
+    }) %>
+
+    <%- include('linkRow', {
+      text: 'info@carehr.nl',
+      href: 'mailto:info@carehr.nl',
+      icon: 'envelope',
+      iconSize: '15px'
+    }) %>
+
+    <%- include('linkRow', {
+      text: '(06) 42 46 84 84',
+      href: 'tel:+31642468484',
+      icon: 'mobile',
+      iconSize: '15px'
+    }) %>
+  </table>
+<%- include('rowEnd') %>
+</body>
+</html>
