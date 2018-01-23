@@ -41,25 +41,29 @@ module.exports = {
       id: 'advies-ondersteuning',
       title: 'HR advies & ondersteuning',
       icon: 'lightbulb',
-      intro: 'Voor vragenstukken als functiewaardering, functiebeschrijving, werving en selectie maar ook voor projecten.'
+      shortDescription: 'Voor vragenstukken als functiewaardering, functiebeschrijving, werving en selectie maar ook voor projecten.',
+      intro: 'De Zorg heeft te maken met ingrijpende veranderingen. Functies vervallen of veranderen. Sociale plannen worden opgesteld.',
+      description: 'Wij ondersteunen Commissie’s Sociale Begeleiding in een aantal ziekenhuizen, revalidatiecentrum en in de ouderenzorg. Daarmee is ervaring opgebouwd om organisaties en medewerkers te adviseren om veranderingsprocessen te beoordelen en te adviseren over processen. Voorkomen is beter dan genezen. Wij ondersteunen u graag in de visie van ons bureau dat wij toegevoegde waarde kunnen hebben voor mens en organisatie.'
     },
     {
       id: 'hr-check',
       title: 'HR check',
       icon: 'check',
-      intro: 'Met behulp van een quickscan een analyse maken van het functioneren en beleving van HR in uw organisatie.'
+      shortDescription: 'Met behulp van een quickscan een analyse maken van het functioneren en beleving van HR in uw organisatie.'
     },
     {
       id: 'voor-zorgmedewerkers',
       title: 'Ondersteuning & juridisch advies voor zorgmedewerkers',
       icon: 'users',
-      intro: 'De Zorg heeft te maken met ingrijpende veranderingen. Functies vervallen of veranderen. Sociale plannen worden opgesteld.'
+      shortDescription: 'De Zorg heeft te maken met ingrijpende veranderingen. Functies vervallen of veranderen. Sociale plannen worden opgesteld.'
     },
     {
       id: 'interim-opdrachten',
       title: 'Interim HR opdrachten',
       icon: 'medkit',
-      intro: 'De bestaande werkzaamheden blijven uitvoeren, een verbeterplan implementeren en ondertussen op zoek naar een oplossing voor de toekomst.'
+      shortDescription: 'De bestaande werkzaamheden blijven uitvoeren, een verbeterplan implementeren en ondertussen op zoek naar een oplossing voor de toekomst.',
+      intro: 'Is uw manager P&O of uw HR-adviseur voor een langere periode uitgeschakeld? Heeft u behoefte uw afdeling P&O, na vertrek van de manager, opnieuw in te richten? Door onze brede ervaring zijn we in staat werkzaamheden snel over te nemen. ',
+      description: 'Wij zorgen er voor dat bestaande werkzaamheden voor u blijven worden uitgevoerd en maken ondertussen een scan van sterke en zwakke punten. Op basis hiervan kan een verbeterplan worden geïmplementeerd en zoeken we met u naar een nieuwe manager.'
     }
   ],
   companies: [

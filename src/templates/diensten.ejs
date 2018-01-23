@@ -5,6 +5,9 @@
     <%- include('partials/breadcrumb') %>
     <h2>Diensten</h2>
     <p class="sub-title">Onze diensten op een rijtje.</p>
+
+    <p><strong>Door onze ruime ervaring in de zorg zijn wij snel inzetbaar. Dat kan zijn voor vragenstukken als functiewaardering, functiebeschrijving, werving en selectie recruitment maar ook voor projecten.</strong></p>
+    <p>Bij CareHr is ook expertise op het gebied van loopbaanontwikkeling, competentie- management en duurzame inzetbaarheid. Wij kiezen voor een projectmatige aanpak.</p>
   </div>
 </section>
 
@@ -22,13 +25,8 @@
         <div class="info-section__info">
           <div class="service__content">
             <h3><%= service.title %></h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-            <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <p><strong><%= service.intro %></strong></p>
+            <p><%= service.description %></p>
           </div>
           <a class="icon-with-text" href="#contact">
             <i class="far fa-envelope"></i>Neem contact op
