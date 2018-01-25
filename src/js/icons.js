@@ -4,6 +4,7 @@ export default function initIcons() {
   const icons = [
     require('@fortawesome/fontawesome-pro-solid/faAngleLeft'),
     require('@fortawesome/fontawesome-pro-solid/faAngleRight'),
+    require('@fortawesome/fontawesome-pro-solid/faAngleDown'),
     require('@fortawesome/fontawesome-pro-regular/faCheck'),
     require('@fortawesome/fontawesome-pro-solid/faCheckCircle'),
     require('@fortawesome/fontawesome-pro-regular/faEnvelope'),
