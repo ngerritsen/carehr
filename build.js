@@ -21,7 +21,7 @@ const env = process.env.NODE_ENV || 'development';
 const time = new Date().toISOString();
 
 const baseUrl = env === 'production'
-  ? 'https://carehr.nl/v2'
+  ? 'https://carehr.nl'
   : 'http://localhost:8080';
 
 console.log(`🚀 Starting ${env} build... [${time}]\n`);
