@@ -13,7 +13,7 @@
 
 .profile__image {
   text-align: right;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 0.8rem;
   position: relative;
   margin: 0;
   height: 28rem;
@@ -22,20 +22,32 @@
   border-radius: 0.4rem 0.4rem 0 0;
 }
 
+.profile__info {
+  flex-grow: 1;
+  padding: 1.6rem 1.6rem 0;
+  position: relative;
+}
+
+.profile__info p {
+  margin-bottom: 0.8rem;
+}
+
+.profile__read-more {
+  padding: 0 1.6rem 1.6rem;
+}
+
+.profile__linkedin:visited,
 .profile__linkedin {
+  color: var(--secondary);
   position: relative;
   font-size: 2.5rem;
+  opacity: 0.8;
 }
 
 .profile__linkedin:hover,
 .profile__linkedin:focus {
   color: var(--secondary);
-}
-
-.profile__info {
-  flex-grow: 1;
-  padding: 1.6rem 1.6rem 0;
-  position: relative;
+  opacity: 1;
 }
 
 @media screen and (min-width: 620px) {

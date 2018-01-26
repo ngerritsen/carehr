@@ -5,6 +5,7 @@ const tagLine = 'Professioneel HR advies & ondersteuning in de zorg.';
 module.exports = {
   title: 'CareHR - ' + tagLine,
   tagLine,
+  gaTrackingId: 'UA-39696629-3',
   profiles: [
     {
       id: 'carlo-reeser',
@@ -55,7 +56,7 @@ module.exports = {
       id: 'hr-check',
       title: 'HR check',
       icon: 'check',
-      shortDescription: 'Met behulp van een quickscan een analyse maken van het functioneren en beleving van HR in uw organisatie.',
+      shortDescription: 'Met behulp van een quickscan, een analyse maken van het functioneren en de beleving van HR in uw organisatie.',
       intro: 'De afgelopen jaren zijn veel zorginstellingen in beweging. Veelal gedwongen door bezuinigingen zijn organisaties aangepast. HR- afdelingen zijn anders georganiseerd en taken zijn vaak verschoven naar de lijn. Heeft dit voldoende effect gehad?',
       description: `
           <p><strong>CareHR kan met behulp van een quickscan een analyse maken van het
@@ -65,16 +66,16 @@ module.exports = {
 gedwongen door bezuinigingen zijn organisaties aangepast. HR-
 afdelingen zijn anders georganiseerd en taken zijn vaak verschoven naar
 de lijn.
-          <br><i style="margin-top: 0.4rem; display: inline-block">Heeft dit voldoende effect gehad?</i>
+          <span class="question">Heeft dit voldoende effect gehad?</span>
         </p>
         <p>
           De zorgorganisaties zijn de laatste jaren verzakelijkt. De informele cultuur in de organisaties is steeds minder van toepassing. Medewerkers worden aangesproken op hun output en op hun functioneren.
-          <br><i style="margin-top: 0.4rem; display: inline-block">Zijn organisaties hiermee verbeterd?</i>
+          <span class="question">Zijn organisaties hiermee verbeterd?</span>
         </p>
         <p></p>
         <p>
           Arbeidstevredenheid is een topic in organisaties. Halen medewerkers nog wel voldoening uit hun werk, zijn ze nog gemotiveerd en hoe ervaren ze de onderlinge werksfeer? Zeker is dat de komende jaren de arbeidsmarkt duidelijk krapper gaat worden. 
-          <br><i style="margin-top: 0.4rem; display: inline-block">Blijven u medewerkers de organisaties trouw en kunt u voldoende
+          <span class="question">Blijven u medewerkers de organisaties trouw en kunt u voldoenspane
           nieuw personeel aan u binden?</i>
         </p>
 

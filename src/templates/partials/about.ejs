@@ -19,12 +19,12 @@
           </figure>
           <div class="profile__info">
             <h3><%= profile.name %></h3>
-            <p>
-              <%= profile.intro %>
-              <a class="icon-with-text show-more-in-line" target="_blank" href="over-ons.html#<%= profile.id %>">
-                <i class="fas fa-angle-right"></i>Lees meer
-              </a>
-            </p>
+            <p><%= profile.intro %></p>
+          </div>
+          <div class="profile__read-more">
+            <a class="icon-with-text show-more-in-line" href="over-ons.html#<%= profile.id %>">
+              <i class="fas fa-angle-right"></i>Lees meer
+            </a>
           </div>
         </div>
       <% }) %>

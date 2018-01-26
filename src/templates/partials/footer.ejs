@@ -4,5 +4,14 @@
         Website ontwerp & ontwikkeling door:&nbsp; <a href="https://nielsgerritsen.com">nielsgerritsen.com</a>
       </center>
     </footer>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= gaTrackingId %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<%= gaTrackingId %>');
+    </script>
   </body>
 </html>
