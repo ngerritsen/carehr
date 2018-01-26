@@ -1,9 +1,16 @@
 'use strict';
 
 const tagLine = 'Professioneel HR advies & ondersteuning in de zorg.';
+const template = global.TEMPLATE;
+
+const websiteTitle = 'CareHR - ' + tagLine;
+const titles = {
+  diensten: 'Diensten',
+  'over-ons': 'Over Ons',
+}
 
 module.exports = {
-  title: 'CareHR - ' + tagLine,
+  title: titles[template] ? (titles[template] + ' - ' + websiteTitle) : websiteTitle,
   tagLine,
   gaTrackingId: 'UA-39696629-3',
   profiles: [

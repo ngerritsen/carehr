@@ -34,6 +34,7 @@ async function run() {
   const css = await buildCss(cssFileInputPath);
 
   for (const template of templates) {
+    global.TEMPLATE = template;
     const html = await renderTemplate(path.join(templateDir, template + '.ejs'), {
       ...require('./data/content'),
       ...require('./data/variables'),
@@ -42,6 +43,8 @@ async function run() {
       url: baseUrl + (template === 'index' ? '' : ('/' + template + '.html')),
       jsPath: `bundle.js?q=${results.hash}`
     });
+
+    delete require.cache[require.resolve('./data/content')];
 
     await writeFile(path.join(htmlOutputDir, template + '.html'), html);
 
