@@ -11,6 +11,7 @@
         <i class="far fa-fw fa-mobile"></i>(06) 42 46 84 84
       </a>
     </div>
+
       <form action="https://formspree.io/info@carehr.nl" method="POST" data-form-validation>
         <div class="form-inline">
           <div class="form-section" data-form-section="name">
@@ -22,13 +23,21 @@
             <input type="email" id="email" name="_replyto">
           </div>
         </div>
-        <div class="form-section" data-form-section="subject">
-          <label for="subject">Onderwerp*</label>
-          <input type="text" id="subject" name="_subject">
+
+        <div class="form-inline">
+          <div class="form-section" data-form-section="subject">
+            <label for="subject">Onderwerp</label>
+            <input type="text" id="subject" name="_subject">
+          </div>
+          <div class="form-section" data-form-section="subject">
+            <label for="phone">Telefoonnummer</label>
+            <input type="text" id="phone" name="phone">
+          </div>
         </div>
+
         <div class="form-section" data-form-section="message">
           <label for="message">Bericht*</label>
-          <textarea name="message" id="message"></textarea>
+          <textarea name="message" id="message">Graag verzoek ik u contact met mij op te nemen.</textarea>
         </div>
         <button type="submit" class="button button--full-width">
           Versturen

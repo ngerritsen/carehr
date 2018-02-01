@@ -1,5 +1,13 @@
 <%- include('email/header') %>
 
+<%- include('email/rowStart', { backgroundColor: colors.background }) %>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <%- include('email/textRow', {
+      text: '<big>Beste Jan Cortenbach</big>,<br><br>CareHR geeft professioneel advies in de zorg & onderwijs. Onze consultants hebben veel ervaring in management en directie functies in deze sectoren.'
+    }) %>
+  </table>
+<%- include('email/rowEnd') %>
+
 <%- include('email/rowStart', { backgroundColor: colors.primary }) %>
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <%- include('email/textRow', {
@@ -10,7 +18,7 @@
     }) %>
 
     <%- include('email/textRow', {
-      text: 'Een quickscan analyse van het functioneren en de beleving van HR in uw organisatie.',
+      text: 'Een quickscan van het functioneren en de beleving van HR in uw organisatie.',
       color: colors.leaderboardForeground,
       font: fonts.heading,
       fontSize: fontSizes.quote

@@ -16,13 +16,8 @@ export default function validateForm(formValues) {
     valid = false;
   }
 
-  if (subject.value.trim().length < 3) {
-    setError(subject.container, 'Vul een onderwerp van minimaal 3 karakters in.');
-    valid = false;
-  }
-
-  if (message.value.trim().length < 21) {
-    setError(message.container, 'Vul een bericht van minimaal 21 karakters in.');
+  if (message.value.trim().length < 16) {
+    setError(message.container, 'Vul een bericht van minimaal 16 karakters in.');
     valid = false;
   }
 
@@ -31,7 +26,7 @@ export default function validateForm(formValues) {
 
 function unsetError(container) {
   const errorEl = container.querySelector('[data-form-error]');
-
+  console.log(errorEl);
   if (errorEl) {
     container.removeChild(errorEl);
   }
@@ -53,6 +48,7 @@ function createErrorEl(message) {
 
   el.textContent = message;
   el.classList.add('form-error');
+  el.dataset.formError = true;
 
   return el;
 }

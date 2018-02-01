@@ -7,9 +7,9 @@
 <tr>
   <td style="padding-bottom: <%= paddingBot %>; font-family: <%= fontFamily %>; color: <%= fgColor %>; font-size: <%= fntSize %>;">
     <% if (boldFont) { %>
-      <b><%= text %></b>
+      <b><%- text %></b>
     <% } else { %>
-      <%= text %>
+      <%- text %>
     <% } %>
   </td>
 </tr>
