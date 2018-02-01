@@ -3,10 +3,9 @@ textarea {
   display: block;
   border: 0;
   background-color: var(--white);
-  padding: 0 1.8rem;
-  height: 5rem;
-  line-height: 5rem;
+  padding: 1.4rem 1.8rem;
   width: 100%;
+  line-height: 1.6;
   font-size: 1.4rem;
   border-radius: 0.6rem;
 }
