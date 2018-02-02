@@ -18,8 +18,8 @@ module.exports = {
       id: 'carlo-reeser',
       name: 'Carlo Reeser',
       image: 'carlo.jpg',
-      intro: 'Carlo heeft jarenlange ervaring opgebouwd als HR-manager van Sophia Revalidatie. Sinds 4 jaar werkzaam als freelancer adviseur. Werkt als voorzitter van diverse commissies op gebied van uitvoering sociale plannen en functiewaardering o.a. voor de Haagse ziekenhuizen.',
-      description: 'Carlo heeft jarenlange ervaring opgebouwd als HR-manager van Sophia Revalidatie. Sinds 4 jaar werkzaam als freelancer adviseur. Werkt als voorzitter van diverse commissies op gebied van uitvoering sociale plannen (Argos Zorggroep) en functiewaardering o.a. voor de Haagse ziekenhuizen (Haga MCH LangeLand ZKH, GHZ). Bij Labwest en Schroeder van der Kolk heeft hij projecten gedaan op het gebied van duurzame inzetbaarheid en het in beeld brengen van de management structuur.',
+      intro: 'Carlo heeft jarenlange ervaring opgebouwd als HR-manager van Sophia Revalidatie. Sinds 4 jaar werkzaam als freelance adviseur. Werkt als voorzitter van diverse commissies op gebied van uitvoering sociale plannen en functiewaardering o.a. voor de Haagse ziekenhuizen.',
+      description: 'Carlo heeft jarenlange ervaring opgebouwd als HR-manager van Sophia Revalidatie. Sinds 4 jaar werkzaam als freelance adviseur. Werkt als voorzitter van diverse commissies op gebied van uitvoering sociale plannen (Argos Zorggroep) en functiewaardering o.a. voor de Haagse ziekenhuizen (Haga MCH LangeLand ZKH, GHZ). Bij Labwest en Schroeder van der Kolk heeft hij projecten gedaan op het gebied van duurzame inzetbaarheid en het in beeld brengen van de management structuur.',
       linkedin: 'https://www.linkedin.com/in/carlo-reeser-85b6338/'
     },
     {
@@ -49,13 +49,13 @@ module.exports = {
       id: 'advies-ondersteuning',
       title: 'HR advies & ondersteuning',
       icon: 'lightbulb',
-      shortDescription: 'Voor vragenstukken als functiewaardering, functiebeschrijving, werving en selectie maar ook voor projecten.',
+      shortDescription: 'Voor vraagstukken als functiewaardering, functiebeschrijving, werving en selectie maar ook voor projecten.',
       description: `
         <p>
           <strong>De Zorg heeft te maken met ingrijpende veranderingen. Functies vervallen of veranderen. Sociale plannen worden opgesteld.</strong>
         </p>
         <p>
-          Wij ondersteunen Commissie’s Sociale Begeleiding in een aantal ziekenhuizen, revalidatiecentrum en in de ouderenzorg. Daarmee is ervaring opgebouwd om organisaties en medewerkers te adviseren om veranderingsprocessen te beoordelen en te adviseren over processen. Voorkomen is beter dan genezen. Wij ondersteunen u graag in de visie van ons bureau dat wij toegevoegde waarde kunnen hebben voor mens en organisatie.
+          Wij ondersteunen Commissies Sociale Begeleiding in ziekenhuizen, revalidatiecentra en in de ouderenzorg. Daarmee hebben wij de ervaring opgebouwd om organisaties en medewerkers te adviseren, veranderingsprocessen te beoordelen en te adviseren over processen. Voorkomen is beter dan genezen. Wij ondersteunen u graag in vanuit vanuit de visie dat wij toegevoegde waarde kunnen hebben voor mens en organisatie.
         </p>
       `
     },
@@ -82,7 +82,7 @@ de lijn.
         <p></p>
         <p>
           Arbeidstevredenheid is een topic in organisaties. Halen medewerkers nog wel voldoening uit hun werk, zijn ze nog gemotiveerd en hoe ervaren ze de onderlinge werksfeer? Zeker is dat de komende jaren de arbeidsmarkt duidelijk krapper gaat worden. 
-          <span class="question">Blijven u medewerkers de organisaties trouw en kunt u voldoenspane
+          <span class="question">Blijven u medewerkers de organisaties trouw en kunt u voldoende
           nieuw personeel aan u binden?</i>
         </p>
 
