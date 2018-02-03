@@ -12,7 +12,16 @@
     <meta property="og:image:height" content="450">
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <title><%= title %></title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rubik" rel="stylesheet">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Rubik" rel="stylesheet">
+    </noscript>
+    <script>
+      window.webFontConfig = {
+        google: {
+          families: [ 'Open Sans:400,700', 'Rubik' ]
+        }
+      };
+    </script>
     <%- '<style>' + css + '</style>' %>
     <script src="<%= jsPath %>"></script>
   </head>
