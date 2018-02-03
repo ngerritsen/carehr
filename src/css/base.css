@@ -110,3 +110,23 @@ a:hover {
   padding: 0;
   margin: 0 0 2.4rem 2.4rem;
 }
+
+.button-post-fix {
+  display: block;
+  text-align: center;
+  margin-top: 1.6rem;
+}
+
+.leaderboard-link,
+.leaderboard-link:visited {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 620px) {
+  .button-post-fix {
+    display: inline-block;
+    text-align: left;
+    margin-left: 1.6rem;
+  }
+}
