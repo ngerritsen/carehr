@@ -16,9 +16,9 @@ module.exports = {
     heading: 'Rubik, Helvetica, Arial, sans-serif'
   },
   fontSizes: {
-    main: '16px',
+    main: '15px',
     heading: '22px',
     title: '26px',
-    quote: '18px'
+    quote: '16px'
   }
 };

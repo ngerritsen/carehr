@@ -82,7 +82,7 @@ de lijn.
         <p></p>
         <p>
           Arbeidstevredenheid is een topic in organisaties. Halen medewerkers nog wel voldoening uit hun werk, zijn ze nog gemotiveerd en hoe ervaren ze de onderlinge werksfeer? Zeker is dat de komende jaren de arbeidsmarkt duidelijk krapper gaat worden. 
-          <span class="question">Blijven u medewerkers de organisaties trouw en kunt u voldoende
+          <span class="question">Blijven uw medewerkers de organisaties trouw en kunt u voldoende
           nieuw personeel aan u binden?</i>
         </p>
 
@@ -113,7 +113,7 @@ de lijn.
       shortDescription: 'De Zorg heeft te maken met ingrijpende veranderingen. Functies vervallen of veranderen. Sociale plannen worden opgesteld.',
       description: `
         <p>
-          <strong>Staat je baan op de tocht, heb je een conflict met je leidinggevende. Heb je moeite met de verzuimbegeleiding van je leidinggevende?</strong>
+          <strong>Staat je baan op de tocht, heb je een conflict met je leidinggevende? Heb je moeite met de verzuimbegeleiding van je leidinggevende?</strong>
         </p>
         <p>
           Wij kunnen je juridisch ondersteunen en bijstaan in de gesprekken met je werkgever.

@@ -3,7 +3,17 @@
 <%- include('email/rowStart', { backgroundColor: colors.background }) %>
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <%- include('email/textRow', {
-      text: '<big>Beste Jan Cortenbach</big>,<br><br>CareHR geeft professioneel advies in de zorg & onderwijs. Onze consultants hebben veel ervaring in management en directie functies in deze sectoren.'
+      text: `
+<big>Beste Piera</big>,
+<p>
+Sinds enkele maanden ben ik samen met twee HR collega’s betrokken bij <a href="https://carehr.nl" target="_blank">CareHR</a>. Wij willen in organisaties onderzoek doen naar het functioneren en de beleving van HR in zorgorganisaties.
+Aan de hand van een aantal interviews kunnen wij snel feedback geven hoe er over HR in organisaties wordt gedacht. Is het iets voor jullie instelling?
+</p>
+<p>
+Hieronder vind je meer informatie over ons product. Mag ik je er eens over bellen of geef anders aan dat je geen behoefte hebt of geen mogelijkheden ziet. Ik hoor graag van je.
+</p>
+<i>- Fred Spiering</i>
+      `
     }) %>
   </table>
 <%- include('email/rowEnd') %>
