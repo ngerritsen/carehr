@@ -6,5 +6,5 @@ before_install:
 script:
   - npm run build
 after_success:
-  - zip -r carehr.zip *.html bundle.js favicon.png img
+  - "zip -r carehr.zip *.html bundle.js favicon.png img"
   - "curl -F 'data=@carehr.zip' -H 'X-Key: '$DEPLOY_KEY -H 'X-ExtractTo: .' https://carehr.nl/deploy/"
